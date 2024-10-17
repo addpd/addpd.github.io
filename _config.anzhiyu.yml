@@ -1031,7 +1031,7 @@ lazyload:
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
-  enable: true # 晚点开
+  enable: true
   startup_image_enable: true
   manifest: /manifest.json
   theme_color: var(--anzhiyu-main)
@@ -1056,7 +1056,7 @@ home_top:
   subTitle: 万物可爱。
   siteText: anheyu.com
   category:
-    - name: 前端11
+    - name: 前端
       path: /categories/前端开发/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue

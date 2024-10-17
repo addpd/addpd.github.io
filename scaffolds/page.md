@@ -14,4 +14,5 @@ aplayer:
 highlight_shrink:
 type:
 top_single_background:
+published: false
 ---
