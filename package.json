@@ -5,9 +5,9 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo clean && hexo generate && hexo deploy",
-    "server": "hexo server",
-    "build-and-serve": "hexo clean && hexo generate && hexo server"
+    "deploy": "hexo clean && hexo generate --config _config.yml && hexo deploy",
+    "server": "hexo clean && hexo server",
+    "dev": "hexo clean && hexo server --config _config.yml,_config.ignore.yml"
   },
   "hexo": {
     "version": "7.3.0"
