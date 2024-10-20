@@ -46,7 +46,7 @@ mourn:
 # Code Blocks (代码相关)
 # --------------------------------------
 
-highlight_theme: darker #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -162,14 +162,13 @@ cover:
   # left/right/both
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
-  default_cover:
+  default_cover: false
     # - /img/default_cover.jpg
-    # - /img/夜间地球.png
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
   flink: /img/friend_404.gif
-  post_page: /img/夜间地球.png
+  post_page: /img/friend_404.gif
 
 # A simple 404 page
 error_404:
@@ -194,7 +193,7 @@ post_meta:
 
 # 主色调相关配置
 mainTone:
-  enable: false # true or false 文章是否启用获取图片主色调
+  enable: true # true or false 文章是否启用获取图片主色调
   mode: api # cdn/api/both cdn模式为图片url+imageAve参数获取主色调，api模式为请求API获取主色调，both模式会先请求cdn参数，无法获取的情况下将请求API获取，可以在文章内配置main_color: '#3e5658'，使用十六进制颜色，则不会请求both/cdn/api获取主色调，而是直接使用配置的颜色
   # 项目地址：https://github.com/anzhiyu-c/img2color-go
   api: https://img2color-go.vercel.app/api?img= # mode为api时可填写
@@ -794,6 +793,7 @@ preloader:
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
   avatar: /img/avatar.png # 自定加载动画义头像
+  # avatar: /img/512.png # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -817,7 +817,7 @@ aside:
     enable: false
     content: 欢迎来看我的博客鸭~
   card_weixin:
-    enable: true
+    enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
     backFace: https://bu.dusays.com/2023/05/13/645fa415e8694.png
   card_recent_post:
@@ -1014,8 +1014,9 @@ instantpage: true
 
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之间添加空格)
+# -71ms
 pangu:
-  enable: true
+  enable: false
   field: site # site/post
 
 # Lazyload (图片懒加载)
@@ -1079,8 +1080,9 @@ home_top:
   banner:
     tips: 新品主题
     title: Theme-AnZhiYu
-    image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
-    link: https://docs.anheyu.com/
+    # -310ms
+    image: ""
+    link: ""
 
 # 朋友圈配置
 friends_vue:
@@ -1129,7 +1131,7 @@ comment_barrage_config:
 # 左下角音乐配置项
 # https://github.com/metowolf/MetingJS
 nav_music:
-  enable: true
+  enable: false
   console_widescreen_music: false # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示
   id: 5530062145
   server: tencent
@@ -1239,9 +1241,12 @@ dynamicEffect:
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
-  head:
+  head: 
+    # 配置多个地址的 CSP 防止 XSS 攻击
+    - '<meta http-equiv="Content-Security-Policy" content="default-src ''self''; script-src ''self'' https://cdn.cbd.int https://npm.elemecdn.com http://busuanzi.ibruce.info ''unsafe-inline'' ''unsafe-eval'' https://lf3-cdn-tos.bytecdntp.com; style-src ''self'' https://cdn.cbd.int https://npm.elemecdn.com ''unsafe-inline''; img-src ''self'' data: https://image.anheyu.com https://ob-1300571388.cos.ap-nanjing.myqcloud.com https://bu.dusays.com https://npm.elemecdn.com; connect-src ''self'' https://img2color-go.vercel.app; font-src ''self'' https://cdn.cbd.int; object-src ''none''; base-uri ''self''; form-action ''self'';">'
+    - '<meta name="description" content="编程开发，生活内容分享">'
     # 自定义css
-    # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
 
   bottom:
     # 自定义js
