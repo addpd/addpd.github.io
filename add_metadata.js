@@ -53,6 +53,20 @@ function cleanBodyContent(bodyContent) {
   return bodyContent.replace(/^\s*\n/g, ''); // 删除开头的多余空行
 }
 
+// 确保 title 在元数据的第一行
+function ensureTitleFirst(metadata) {
+  const orderedMetadata = {};
+  if (metadata.title) {
+    orderedMetadata.title = metadata.title;
+  }
+  for (const key in metadata) {
+    if (key !== 'title') {
+      orderedMetadata[key] = metadata[key];
+    }
+  }
+  return orderedMetadata;
+}
+
 // 处理 Markdown 文件，添加元数据并清理多余换行符
 function addMetadataToFile(filePath) {
   try {
@@ -65,7 +79,10 @@ function addMetadataToFile(filePath) {
       const parts = content.split('---');
       frontMatter = parts[1];
       bodyContent = parts.slice(2).join('---');
-      const metadata = yaml.load(frontMatter);
+      let metadata = yaml.load(frontMatter);
+
+      // 确保 title 在第一行
+      metadata = ensureTitleFirst(metadata);
 
       let updatedMetadata = false;
       if (!metadata.title) {
@@ -116,7 +133,7 @@ function addMetadataToFile(filePath) {
       const formattedDate = getFormattedDate(filePath);
 
       if (formattedDate) {
-        const metadata = {
+        let metadata = {
           title: fileName,
           date: formattedDate,
           published: false,
@@ -125,6 +142,9 @@ function addMetadataToFile(filePath) {
           tags: [],
           categories: [],
         };
+
+        // 确保 title 在第一行
+        metadata = ensureTitleFirst(metadata);
 
         // 清理多余的空行
         bodyContent = cleanBodyContent(bodyContent);
