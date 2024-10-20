@@ -6,6 +6,9 @@ const cliProgress = require('cli-progress');
 // 指定要处理的目录
 const targetDirectory = './source/_posts/obsidian_data';
 
+// 要忽略的目录
+const ignoredDirectories = ['template通用模板'];
+
 // 记录改动的文件数量
 let modifiedFilesCount = 0;
 
@@ -32,7 +35,9 @@ function getMdFiles(directory) {
       const stats = fs.statSync(fullPath);
 
       if (stats.isDirectory()) {
-        mdFiles = mdFiles.concat(getMdFiles(fullPath));
+        if (!ignoredDirectories.includes(file)) {
+          mdFiles = mdFiles.concat(getMdFiles(fullPath));
+        }
       } else if (file.endsWith('.md')) {
         mdFiles.push(fullPath);
       }
