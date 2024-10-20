@@ -1,2 +1,2 @@
 ignore:
-  - source/_posts/*.md
+  - "**/sample"
