@@ -56,6 +56,9 @@ importers:
       hexo-theme-anzhiyu:
         specifier: ^1.6.14
         version: 1.6.14
+      hexo-theme-fluid:
+        specifier: ^1.9.8
+        version: 1.9.8(nunjucks@3.2.4(chokidar@3.6.0))
       hexo-uglify:
         specifier: ^2.0.0
         version: 2.0.0
@@ -1495,6 +1498,12 @@ packages:
 
   hexo-theme-anzhiyu@1.6.14:
     resolution: {integrity: sha512-Ltbsaf1URcFfZuqMVeDvRM1XUjC/PYbXtgbv9V9FVjfv85sotELCEjX+PbkangyGFvlO0oWNJeEjNS9/UUF13w==}
+
+  hexo-theme-fluid@1.9.8:
+    resolution: {integrity: sha512-+HUx8xrBA2WWgJYMhlCy5L69LLgAL8PjsLIyIbh81Ftc0J71V69K04Zqv270VjRSs38rx9djeQPrgidtMdnh3g==}
+    engines: {node: '>=8.10.0'}
+    peerDependencies:
+      nunjucks: ^3.0.0
 
   hexo-uglify@2.0.0:
     resolution: {integrity: sha512-pxKBWhe+WUkITVcFUKY8o3A16Zh8t9XRgmvuZD54HFOwApCxlJmWNSh7kMT1nsrElozpSzMPpFgsRG7yz7j92Q==}
@@ -4551,6 +4560,10 @@ snapshots:
       hexo-renderer-stylus: 3.0.1
     transitivePeerDependencies:
       - supports-color
+
+  hexo-theme-fluid@1.9.8(nunjucks@3.2.4(chokidar@3.6.0)):
+    dependencies:
+      nunjucks: 3.2.4(chokidar@3.6.0)
 
   hexo-uglify@2.0.0:
     dependencies:

@@ -31,6 +31,7 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-anzhiyu": "^1.6.14",
+    "hexo-theme-fluid": "^1.9.8",
     "hexo-uglify": "^2.0.0",
     "pwa-asset-generator": "^6.3.2"
   }

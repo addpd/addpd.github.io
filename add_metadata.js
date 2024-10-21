@@ -108,6 +108,14 @@ function addMetadataToFile(filePath) {
         metadata.cover_img = '';
         updatedMetadata = true;
       }
+      if (!metadata.index_img) {
+        metadata.index_img = '';
+        updatedMetadata = true;
+      }
+      if (!metadata.banner_img) {
+        metadata.banner_img = '';
+        updatedMetadata = true;
+      }
       if (!metadata.tags) {
         metadata.tags = [];
         updatedMetadata = true;
@@ -139,6 +147,8 @@ function addMetadataToFile(filePath) {
           published: false,
           top_img: '',
           cover_img: '',
+          index_img: '',
+          banner_img: '',
           tags: [],
           categories: [],
         };
