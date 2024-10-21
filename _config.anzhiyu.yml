@@ -144,7 +144,7 @@ avatar:
   effect: false # 头像转圈圈
 
 # Disable all banner image
-disable_top_img: false
+disable_top_img: true
 
 # The banner image of home page
 index_img: false # "background: url() top / cover no-repeat"
@@ -162,7 +162,8 @@ cover:
   # left/right/both
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
-  default_cover: false
+  default_cover:
+    false
     # - /img/default_cover.jpg
 
 # Replace Broken Images (替换无法显示的图片)
@@ -1240,9 +1241,9 @@ dynamicEffect:
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
-  head: 
+  head:
     # 配置多个地址的 CSP 防止 XSS 攻击
-    - '<meta http-equiv="Content-Security-Policy" content="default-src ''self''; script-src ''self'' https://cdn.cbd.int https://npm.elemecdn.com http://busuanzi.ibruce.info ''unsafe-inline'' ''unsafe-eval'' https://lf3-cdn-tos.bytecdntp.com; style-src ''self'' https://cdn.cbd.int https://npm.elemecdn.com ''unsafe-inline''; img-src ''self'' data: https://image.anheyu.com https://ob-1300571388.cos.ap-nanjing.myqcloud.com https://bu.dusays.com https://npm.elemecdn.com; connect-src ''self'' https://img2color-go.vercel.app; font-src ''self'' https://cdn.cbd.int; object-src ''none''; base-uri ''self''; form-action ''self'';">'
+    # - '<meta http-equiv="Content-Security-Policy" content="default-src ''self''; script-src ''self'' https://cdn.cbd.int https://npm.elemecdn.com http://busuanzi.ibruce.info ''unsafe-inline'' ''unsafe-eval'' https://lf3-cdn-tos.bytecdntp.com; style-src ''self'' https://cdn.cbd.int https://npm.elemecdn.com ''unsafe-inline''; img-src ''self'' data: https://image.anheyu.com https://ob-1300571388.cos.ap-nanjing.myqcloud.com https://bu.dusays.com https://npm.elemecdn.com; connect-src ''self'' https://img2color-go.vercel.app; font-src ''self'' https://cdn.cbd.int; object-src ''none''; base-uri ''self''; form-action ''self''; frame-src ''self'' https://*.bilibili.com; media-src ''self'' https://*.bilivideo.com;">'
     - '<meta name="description" content="编程开发，生活内容分享">'
     # 自定义css
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
