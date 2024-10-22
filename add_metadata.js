@@ -81,11 +81,8 @@ function addMetadataToFile(filePath) {
       bodyContent = parts.slice(2).join('---');
       let metadata = yaml.load(frontMatter);
 
-      // 确保 title 在第一行
-      metadata = ensureTitleFirst(metadata);
-
       let updatedMetadata = false;
-      if (!metadata.title) {
+      if (!metadata.title || metadata.title !== path.basename(filePath, '.md')) {
         metadata.title = path.basename(filePath, '.md');
         updatedMetadata = true;
       }
@@ -125,6 +122,9 @@ function addMetadataToFile(filePath) {
         updatedMetadata = true;
       }
 
+      // 确保 title 在第一行
+      metadata = ensureTitleFirst(metadata);
+      
       // 清理多余的空行
       bodyContent = cleanBodyContent(bodyContent);
 
