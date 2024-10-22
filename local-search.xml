@@ -46,6 +46,25 @@
   
   
   <entry>
+    <title>使用calibre转移kindle书籍</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%9B%A0%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8%E4%B8%8E%E7%BB%B4%E4%BF%AE/%E4%BD%BF%E7%94%A8calibre%E8%BD%AC%E7%A7%BBkindle%E4%B9%A6%E7%B1%8D/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%9B%A0%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8%E4%B8%8E%E7%BB%B4%E4%BF%AE/%E4%BD%BF%E7%94%A8calibre%E8%BD%AC%E7%A7%BBkindle%E4%B9%A6%E7%B1%8D/</url>
+    
+    <content type="html"><![CDATA[<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>将kindle中书籍导出</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>calibre:<a href="https://calibre-ebook.com/download">calibre - Download calibre (calibre-ebook.com)</a><br>dedrm插件:<a href="https://github.com/apprenticeharper/DeDRM_tools/releases">Releases · apprenticeharper&#x2F;DeDRM_tools (github.com)</a><br>kindle客户端</p><h1 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h1><h2 id="kindle"><a href="#kindle" class="headerlink" title="kindle"></a>kindle</h2><p>在kindle客户端上把全部书籍下载到本地</p><h2 id="calibre："><a href="#calibre：" class="headerlink" title="calibre："></a>calibre：</h2><p>1、添加插件：首选项-插件-从文件加载插件-选择解压出来的DeDRM_plugin.zip-重启calibre<br>2、配置插件：搜索dedrm-自定义插件-elnk Kindle ebooks-输入kindle设备序列号（亚马逊官网：设置-&gt;全部设置-&gt;设备选项-&gt;设备信息-序列号)</p><h3 id="导入书籍："><a href="#导入书籍：" class="headerlink" title="导入书籍："></a>导入书籍：</h3><p>calibre-添加书籍-从文件和子文件夹中添加-<code>C:\Users\&lt;账户名&gt;\Documents\My Kindle Content</code>-导入后ctrl+a全选右键批量转换-转换完成后再全选右键保存为epub即可</p><h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://zhuanlan.zhihu.com/p/54391402">手把手教你导出kindle里的电子书并转成pdf&#x2F;mobi - 知乎 (zhihu.com)</a><br><a href="https://gulu-dev.com/post/2022-06-04-save-kindle-ebooks-into-calibre/">2022.06 在 Kindle 中国停运前导出所有 Kindle 电子书 (gulu-dev.com)</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>kindle</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>git拉取问题</title>
     <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/git%E6%8B%89%E5%8F%96%E9%97%AE%E9%A2%98/"/>
     <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/git%E6%8B%89%E5%8F%96%E9%97%AE%E9%A2%98/</url>
@@ -76,38 +95,6 @@
     <tags>
       
       <tag>hexo</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>10个动作，在家练爆全身肌肉!(无器械)</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%92%AA%E4%BA%BA%E4%BD%93/10%E4%B8%AA%E5%8A%A8%E4%BD%9C%EF%BC%8C%E5%9C%A8%E5%AE%B6%E7%BB%83%E7%88%86%E5%85%A8%E8%BA%AB%E8%82%8C%E8%82%89!(%E6%97%A0%E5%99%A8%E6%A2%B0)/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%92%AA%E4%BA%BA%E4%BD%93/10%E4%B8%AA%E5%8A%A8%E4%BD%9C%EF%BC%8C%E5%9C%A8%E5%AE%B6%E7%BB%83%E7%88%86%E5%85%A8%E8%BA%AB%E8%82%8C%E8%82%89!(%E6%97%A0%E5%99%A8%E6%A2%B0)/</url>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1qF411Y7Te/?vd_source=6a8ff9295cd5c06e70b3b428d8fbd4c3">10个动作，在家练爆全身肌肉!(无器械)_哔哩哔哩_bilibili</a></p><p>每个动作十次</p><h1 id="1、青蛙俯撑：目标【胸肌上部】"><a href="#1、青蛙俯撑：目标【胸肌上部】" class="headerlink" title="1、青蛙俯撑：目标【胸肌上部】"></a>1、青蛙俯撑：目标【胸肌上部】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408091143035.gif" alt="青蛙俯撑：目标【胸肌上部】.gif|600"></p><h1 id="2、释手俯卧撑：目标【胸肌】和【腰腹】"><a href="#2、释手俯卧撑：目标【胸肌】和【腰腹】" class="headerlink" title="2、释手俯卧撑：目标【胸肌】和【腰腹】"></a>2、释手俯卧撑：目标【胸肌】和【腰腹】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092122494.gif" alt="释手俯卧撑：目标【胸肌】和【腰腹】 00_00_00-00_00_30.gif|600"></p><h1 id="3、屈腿推肩：目标【肩膀】"><a href="#3、屈腿推肩：目标【肩膀】" class="headerlink" title="3、屈腿推肩：目标【肩膀】"></a>3、屈腿推肩：目标【肩膀】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092131369.gif" alt="屈腿推肩：目标【肩膀】 00_00_00-00_00_30.gif|600"></p><h1 id="4、支撑侧平举：目标【肩膀中束】"><a href="#4、支撑侧平举：目标【肩膀中束】" class="headerlink" title="4、支撑侧平举：目标【肩膀中束】"></a>4、支撑侧平举：目标【肩膀中束】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092150672.gif" alt="支撑侧平举：目标【肩膀中束】 00_00_00-00_00_30.gif|600"><br>另一边<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092151298.gif" alt="支撑侧平举：目标，【肩膀中束】另一边 00_00_00-00_00_30.gif|600"></p><h1 id="5、背面环绕：目标【背部】和【腰部】"><a href="#5、背面环绕：目标【背部】和【腰部】" class="headerlink" title="5、背面环绕：目标【背部】和【腰部】"></a>5、背面环绕：目标【背部】和【腰部】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092151595.gif" alt="背面环绕：目标【背部】和【腰部】 00_00_00-00_00_30.gif|600"></p><h1 id="6、毛巾下拉：目标【背部】和【肩膀后束】"><a href="#6、毛巾下拉：目标【背部】和【肩膀后束】" class="headerlink" title="6、毛巾下拉：目标【背部】和【肩膀后束】"></a>6、毛巾下拉：目标【背部】和【肩膀后束】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092151213.gif" alt="毛巾下拉：目标【背部】和【肩膀后束】 00_00_00-00_00_30.gif|600"></p><h1 id="7、二头弯举：目标【手臂（二头肌）】"><a href="#7、二头弯举：目标【手臂（二头肌）】" class="headerlink" title="7、二头弯举：目标【手臂（二头肌）】"></a>7、二头弯举：目标【手臂（二头肌）】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092151796.gif" alt="二头弯举：目标【手臂（二头肌）】 00_00_00-00_00_30.gif|600"></p><h1 id="8、手臂前置俯撑：目标【手臂（三头肌）】"><a href="#8、手臂前置俯撑：目标【手臂（三头肌）】" class="headerlink" title="8、手臂前置俯撑：目标【手臂（三头肌）】"></a>8、手臂前置俯撑：目标【手臂（三头肌）】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092152893.gif" alt="手臂前置俯撑：目标【手臂（三头肌）】 00_00_00-00_00_30.gif|600"></p><h1 id="9、一个半相扑深蹲：目标【臀部】和【大腿后侧】"><a href="#9、一个半相扑深蹲：目标【臀部】和【大腿后侧】" class="headerlink" title="9、一个半相扑深蹲：目标【臀部】和【大腿后侧】"></a>9、一个半相扑深蹲：目标【臀部】和【大腿后侧】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092152139.gif" alt="一个半相扑深蹲：目标【臀部】和【大腿后侧】 00_00_00-00_00_30.gif|600"></p><h1 id="10、单腿辅助深蹲：目标【大腿前侧】"><a href="#10、单腿辅助深蹲：目标【大腿前侧】" class="headerlink" title="10、单腿辅助深蹲：目标【大腿前侧】"></a>10、单腿辅助深蹲：目标【大腿前侧】</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092152169.gif" alt="单腿辅助深蹲：目标【大腿前侧】 00_00_00-00_00_30.gif|600"><br>换边<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202408092152313.gif" alt="10-2 00_00_00-00_00_30.gif|600"></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>使用calibre转移kindle书籍</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%9B%A0%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8%E4%B8%8E%E7%BB%B4%E4%BF%AE/%E4%BD%BF%E7%94%A8calibre%E8%BD%AC%E7%A7%BBkindle%E4%B9%A6%E7%B1%8D/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%9B%A0%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8%E4%B8%8E%E7%BB%B4%E4%BF%AE/%E4%BD%BF%E7%94%A8calibre%E8%BD%AC%E7%A7%BBkindle%E4%B9%A6%E7%B1%8D/</url>
-    
-    <content type="html"><![CDATA[<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>将kindle中书籍导出</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>calibre:<a href="https://calibre-ebook.com/download">calibre - Download calibre (calibre-ebook.com)</a><br>dedrm插件:<a href="https://github.com/apprenticeharper/DeDRM_tools/releases">Releases · apprenticeharper&#x2F;DeDRM_tools (github.com)</a><br>kindle客户端</p><h1 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h1><h2 id="kindle"><a href="#kindle" class="headerlink" title="kindle"></a>kindle</h2><p>在kindle客户端上把全部书籍下载到本地</p><h2 id="calibre："><a href="#calibre：" class="headerlink" title="calibre："></a>calibre：</h2><p>1、添加插件：首选项-插件-从文件加载插件-选择解压出来的DeDRM_plugin.zip-重启calibre<br>2、配置插件：搜索dedrm-自定义插件-elnk Kindle ebooks-输入kindle设备序列号（亚马逊官网：设置-&gt;全部设置-&gt;设备选项-&gt;设备信息-序列号)</p><h3 id="导入书籍："><a href="#导入书籍：" class="headerlink" title="导入书籍："></a>导入书籍：</h3><p>calibre-添加书籍-从文件和子文件夹中添加-<code>C:\Users\&lt;账户名&gt;\Documents\My Kindle Content</code>-导入后ctrl+a全选右键批量转换-转换完成后再全选右键保存为epub即可</p><h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://zhuanlan.zhihu.com/p/54391402">手把手教你导出kindle里的电子书并转成pdf&#x2F;mobi - 知乎 (zhihu.com)</a><br><a href="https://gulu-dev.com/post/2022-06-04-save-kindle-ebooks-into-calibre/">2022.06 在 Kindle 中国停运前导出所有 Kindle 电子书 (gulu-dev.com)</a></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>kindle</tag>
       
     </tags>
     
