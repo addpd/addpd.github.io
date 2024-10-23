@@ -149,25 +149,6 @@
   
   
   <entry>
-    <title>命令行修改壁纸，补充到自动切换任务中</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BF%AE%E6%94%B9%E5%A3%81%E7%BA%B8%EF%BC%8C%E8%A1%A5%E5%85%85%E5%88%B0%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E4%BB%BB%E5%8A%A1%E4%B8%AD/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BF%AE%E6%94%B9%E5%A3%81%E7%BA%B8%EF%BC%8C%E8%A1%A5%E5%85%85%E5%88%B0%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E4%BB%BB%E5%8A%A1%E4%B8%AD/</url>
-    
-    <content type="html"><![CDATA[<ol><li>cmd输入regedit进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cmd输入 RunDll32<span class="hljs-selector-class">.exe</span> USER32<span class="hljs-selector-class">.DLL</span>,UpdatePerUserSystemParameters<br></code></pre></td></tr></table></figure></li><li>用命令行修改图片的方法<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">reg <span class="hljs-keyword">add</span><span class="language-bash"> <span class="hljs-string">&quot;hkcu\control panel\desktop&quot;</span> /v wallpaper /d <span class="hljs-string">&quot;新壁纸地址(绝对地址）&quot;</span> /f</span><br></code></pre></td></tr></table></figure></li><li>壁纸缓存所在位置 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">如果壁纸设置成功<br><span class="hljs-name">C</span>:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles<br>在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录<br>这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<br></code></pre></td></tr></table></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>win10</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>dependencies和devDependencies的区别</title>
     <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
@@ -175,25 +156,6 @@
     <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
     
     
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>自动切换深浅主题模式</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E6%B7%B1%E6%B5%85%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%BC%8F/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E6%B7%B1%E6%B5%85%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%BC%8F/</url>
-    
-    <content type="html"><![CDATA[<h1 id="（新）使用软件切换"><a href="#（新）使用软件切换" class="headerlink" title="（新）使用软件切换"></a>（新）使用软件切换</h1><p>使用开源软件 Auto Dark Mode 自动切换主题<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410231204813.png" alt="image.png|600"><br><a href="https://github.com/AutoDarkMode/Windows-Auto-Night-Mode">AutoDarkMode&#x2F;Windows-Auto-Night-Mode：在 Windows 10 和 Windows 11 的深色和浅色主题之间自动切换 — AutoDarkMode&#x2F;Windows-Auto-Night-Mode: Automatically switches between the dark and light theme of Windows 10 and Windows 11 (github.com)</a></p><h1 id="（旧）任务栏切换"><a href="#（旧）任务栏切换" class="headerlink" title="（旧）任务栏切换"></a>（旧）任务栏切换</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell">reg.exe<br>应用深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 0 /f<br>应用浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 1 /f<br><br>开始菜单等深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 0 /f<br>开始菜单等浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 1 /f<br></code></pre></td></tr></table></figure><ol><li>打开任务计划程序<ol><li>我的电脑右键管理打开</li><li>或用utools输入”任务计划程序”打开</li></ol></li><li>创建基本任务<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344222.png" alt="Pasted image 20221028221214|600"></li></ol></li><li>输入启动的程序和参数<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344223.png" alt="Pasted image 20221028221416|600"></li></ol></li><li>设置计划过了时间也启动<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344224.png" alt="Pasted image 20221028221505|600"></li></ol></li><li>睡眠模式启动后也会执行，只不过会延迟一会（shutdown -h是休眠模式）</li><li>隐藏任务执行时出现的cmd窗口<ol><li>选择<code>不管用户是否登录都要运行</code> 即可 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344220.png" alt="|600"></li></ol></li></ol>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>win10</tag>
-      
-    </tags>
     
   </entry>
   
@@ -221,11 +183,11 @@
   
   
   <entry>
-    <title>vscode 修改状态栏底部和字体的颜色</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/</url>
+    <title>vscode 工作区配置插件 配置不同工作环境</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E5%B7%A5%E4%BD%9C%E5%8C%BA%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6%20%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E5%B7%A5%E4%BD%9C%E5%8C%BA%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6%20%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/</url>
     
-    <content type="html"><![CDATA[<p>点击齿轮进入setting<br>搜索workbench.colorCustomizations,然后点击编辑setting.json<br>“workbench.colorCustomizations”: {</p><p>        &#x2F;&#x2F;状态栏背景颜色</p><p>        “statusBar.background”: “#4D51E7”,</p><p>        “statusBar.noFolderBackground”: “#4D51E7”,</p><p>        “statusBar.debuggingBackground”: “#4D51E7”,</p><p>        “statusBar.foreground”: “#DBDBDB”&#x2F;&#x2F;底部栏字体颜色</p><p>    }</p><p>字体颜色属性:”statusBar.foreground”<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403513.png" alt="|600"></p>]]></content>
+    <content type="html"><![CDATA[<p>背景：<br>公司中老项目都是用的vue2，新项目用的vue3，在vscode中，vue2用的插件是Vetur，vue3用的插件是Vue Language Features (Volar)，这就导致打开vue2的时候需要禁用Volar，打开vue3的时候需要禁用Vetur。而vscode提供了工作区的概念，可以给每个工作区配置不用的插件，形成不同的工作环境。</p><p>使用：</p><ol><li><p>打开文件夹</p></li><li><p>左上角【文件】-【将工作区另存为】-选择合适位置-【保存】</p></li><li><p>左上角【文件】-【首选项】-【设置】可以看到工作区是否创建成功</p></li><li><p>找到想要配置的插件，禁用&#x2F;启用到对应工作区即可</p></li></ol><p>建好工作区后，以后同配置的文件夹，可以直接拖到对应的工作区，即可享受相同的配置。</p>]]></content>
     
     
     
@@ -240,11 +202,11 @@
   
   
   <entry>
-    <title>vscode 工作区配置插件 配置不同工作环境</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E5%B7%A5%E4%BD%9C%E5%8C%BA%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6%20%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E5%B7%A5%E4%BD%9C%E5%8C%BA%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6%20%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/</url>
+    <title>vscode 修改状态栏底部和字体的颜色</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/</url>
     
-    <content type="html"><![CDATA[<p>背景：<br>公司中老项目都是用的vue2，新项目用的vue3，在vscode中，vue2用的插件是Vetur，vue3用的插件是Vue Language Features (Volar)，这就导致打开vue2的时候需要禁用Volar，打开vue3的时候需要禁用Vetur。而vscode提供了工作区的概念，可以给每个工作区配置不用的插件，形成不同的工作环境。</p><p>使用：</p><ol><li><p>打开文件夹</p></li><li><p>左上角【文件】-【将工作区另存为】-选择合适位置-【保存】</p></li><li><p>左上角【文件】-【首选项】-【设置】可以看到工作区是否创建成功</p></li><li><p>找到想要配置的插件，禁用&#x2F;启用到对应工作区即可</p></li></ol><p>建好工作区后，以后同配置的文件夹，可以直接拖到对应的工作区，即可享受相同的配置。</p>]]></content>
+    <content type="html"><![CDATA[<p>点击齿轮进入setting<br>搜索workbench.colorCustomizations,然后点击编辑setting.json<br>“workbench.colorCustomizations”: {</p><p>        &#x2F;&#x2F;状态栏背景颜色</p><p>        “statusBar.background”: “#4D51E7”,</p><p>        “statusBar.noFolderBackground”: “#4D51E7”,</p><p>        “statusBar.debuggingBackground”: “#4D51E7”,</p><p>        “statusBar.foreground”: “#DBDBDB”&#x2F;&#x2F;底部栏字体颜色</p><p>    }</p><p>字体颜色属性:”statusBar.foreground”<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403513.png" alt="|600"></p>]]></content>
     
     
     
@@ -310,6 +272,44 @@
     <tags>
       
       <tag>vscode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>命令行修改壁纸，补充到自动切换任务中</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BF%AE%E6%94%B9%E5%A3%81%E7%BA%B8%EF%BC%8C%E8%A1%A5%E5%85%85%E5%88%B0%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E4%BB%BB%E5%8A%A1%E4%B8%AD/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BF%AE%E6%94%B9%E5%A3%81%E7%BA%B8%EF%BC%8C%E8%A1%A5%E5%85%85%E5%88%B0%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E4%BB%BB%E5%8A%A1%E4%B8%AD/</url>
+    
+    <content type="html"><![CDATA[<ol><li>cmd输入regedit进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cmd输入 RunDll32<span class="hljs-selector-class">.exe</span> USER32<span class="hljs-selector-class">.DLL</span>,UpdatePerUserSystemParameters<br></code></pre></td></tr></table></figure></li><li>用命令行修改图片的方法<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">reg <span class="hljs-keyword">add</span><span class="language-bash"> <span class="hljs-string">&quot;hkcu\control panel\desktop&quot;</span> /v wallpaper /d <span class="hljs-string">&quot;新壁纸地址(绝对地址）&quot;</span> /f</span><br></code></pre></td></tr></table></figure></li><li>壁纸缓存所在位置 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">如果壁纸设置成功<br><span class="hljs-name">C</span>:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles<br>在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录<br>这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<br></code></pre></td></tr></table></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>win10</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>自动切换深浅主题模式</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E6%B7%B1%E6%B5%85%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%BC%8F/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E6%B7%B1%E6%B5%85%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<h1 id="（新）使用软件切换"><a href="#（新）使用软件切换" class="headerlink" title="（新）使用软件切换"></a>（新）使用软件切换</h1><p>使用开源软件 Auto Dark Mode 自动切换主题<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410231204813.png" alt="image.png|600"><br><a href="https://github.com/AutoDarkMode/Windows-Auto-Night-Mode">AutoDarkMode&#x2F;Windows-Auto-Night-Mode：在 Windows 10 和 Windows 11 的深色和浅色主题之间自动切换 — AutoDarkMode&#x2F;Windows-Auto-Night-Mode: Automatically switches between the dark and light theme of Windows 10 and Windows 11 (github.com)</a></p><h1 id="（旧）任务栏切换"><a href="#（旧）任务栏切换" class="headerlink" title="（旧）任务栏切换"></a>（旧）任务栏切换</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell">reg.exe<br>应用深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 0 /f<br>应用浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 1 /f<br><br>开始菜单等深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 0 /f<br>开始菜单等浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 1 /f<br></code></pre></td></tr></table></figure><ol><li>打开任务计划程序<ol><li>我的电脑右键管理打开</li><li>或用utools输入”任务计划程序”打开</li></ol></li><li>创建基本任务<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344222.png" alt="Pasted image 20221028221214|600"></li></ol></li><li>输入启动的程序和参数<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344223.png" alt="Pasted image 20221028221416|600"></li></ol></li><li>设置计划过了时间也启动<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344224.png" alt="Pasted image 20221028221505|600"></li></ol></li><li>睡眠模式启动后也会执行，只不过会延迟一会（shutdown -h是休眠模式）</li><li>隐藏任务执行时出现的cmd窗口<ol><li>选择<code>不管用户是否登录都要运行</code> 即可 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344220.png" alt="|600"></li></ol></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>win10</tag>
       
     </tags>
     
