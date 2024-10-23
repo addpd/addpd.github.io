@@ -149,19 +149,6 @@
   
   
   <entry>
-    <title>dependencies和devDependencies的区别</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
-    
-    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>vscode &amp; obsidian 设置组合符号</title>
     <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/"/>
     <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/</url>
@@ -175,6 +162,25 @@
       <tag>vscode</tag>
       
       <tag>字体</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 修改状态栏底部和字体的颜色</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/</url>
+    
+    <content type="html"><![CDATA[<p>点击齿轮进入setting<br>搜索workbench.colorCustomizations,然后点击编辑setting.json<br>“workbench.colorCustomizations”: {</p><p>        &#x2F;&#x2F;状态栏背景颜色</p><p>        “statusBar.background”: “#4D51E7”,</p><p>        “statusBar.noFolderBackground”: “#4D51E7”,</p><p>        “statusBar.debuggingBackground”: “#4D51E7”,</p><p>        “statusBar.foreground”: “#DBDBDB”&#x2F;&#x2F;底部栏字体颜色</p><p>    }</p><p>字体颜色属性:”statusBar.foreground”<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403513.png" alt="|600"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
       
     </tags>
     
@@ -202,11 +208,11 @@
   
   
   <entry>
-    <title>vscode 修改状态栏底部和字体的颜色</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/</url>
+    <title>vscode 自定义代码注释颜色</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E9%A2%9C%E8%89%B2/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E9%A2%9C%E8%89%B2/</url>
     
-    <content type="html"><![CDATA[<p>点击齿轮进入setting<br>搜索workbench.colorCustomizations,然后点击编辑setting.json<br>“workbench.colorCustomizations”: {</p><p>        &#x2F;&#x2F;状态栏背景颜色</p><p>        “statusBar.background”: “#4D51E7”,</p><p>        “statusBar.noFolderBackground”: “#4D51E7”,</p><p>        “statusBar.debuggingBackground”: “#4D51E7”,</p><p>        “statusBar.foreground”: “#DBDBDB”&#x2F;&#x2F;底部栏字体颜色</p><p>    }</p><p>字体颜色属性:”statusBar.foreground”<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403513.png" alt="|600"></p>]]></content>
+    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     
@@ -261,19 +267,13 @@
   
   
   <entry>
-    <title>vscode 自定义代码注释颜色</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E9%A2%9C%E8%89%B2/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E9%A2%9C%E8%89%B2/</url>
+    <title>dependencies和devDependencies的区别</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
     
-    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
     
     
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-    </tags>
     
   </entry>
   
