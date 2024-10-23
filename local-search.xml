@@ -46,25 +46,6 @@
   
   
   <entry>
-    <title>git拉取问题</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/git%E6%8B%89%E5%8F%96%E9%97%AE%E9%A2%98/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/git%E6%8B%89%E5%8F%96%E9%97%AE%E9%A2%98/</url>
-    
-    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git.exe pull -v --progress &quot;origin&quot; warning: ----------------- SECURITY WARNING ---------------- warning: | TLS certificate verification has been disabled! | warning: --------------------------------------------------- warning: HTTPS connections may not be secure. See https://aka.ms/gcm/tlsverify for more information. POST git-upload-pack (165 bytes) From https://gitee.com/addpd/obsidian_data_backups = [up to date] main -&gt; origin/main = [up to date] master -&gt; origin/master You asked to pull from the remote &#x27;origin&#x27;, but did not specify a branch. Because this is not the default configured remote for your current branch, you must specify a branch on the command line.<br></code></pre></td></tr></table></figure><p><strong>问题分析：</strong></p><p>您在执行 <code>git pull</code> 命令时遇到了以下两个主要问题：</p><ol><li><p><strong>TLS证书验证被禁用的警告：</strong></p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-built_in">warning</span>: <span class="hljs-comment">----------------- SECURITY WARNING ----------------</span><br><span class="hljs-built_in">warning</span>: | TLS certificate verification has been disabled! |<br><span class="hljs-built_in">warning</span>: <span class="hljs-comment">---------------------------------------------------</span><br><span class="hljs-built_in">warning</span>: HTTPS connections may <span class="hljs-keyword">not</span> be secure. See https://aka.ms/gcm/tlsverify <span class="hljs-keyword">for</span> more information.<br></code></pre></td></tr></table></figure><p>这表示您的Git配置中已禁用了TLS证书验证，这可能导致HTTPS连接不安全。</p></li><li><p><strong>未指定要pull的分支：</strong></p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">You asked <span class="hljs-built_in">to</span> pull <span class="hljs-built_in">from</span> <span class="hljs-keyword">the</span> remote <span class="hljs-string">&#x27;origin&#x27;</span>, but did <span class="hljs-keyword">not</span> specify<br><span class="hljs-keyword">a</span> branch. Because this is <span class="hljs-keyword">not</span> <span class="hljs-keyword">the</span> default configured remote<br><span class="hljs-keyword">for</span> your current branch, you must specify <span class="hljs-keyword">a</span> branch <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">command</span> <span class="hljs-title">line</span>.<br></code></pre></td></tr></table></figure><p>这表示您尝试从远程仓库 <code>origin</code> 拉取，但未指定分支，而当前分支未配置默认的跟踪分支。</p></li></ol><hr><p><strong>解决方案：</strong></p><h3 id="一、解决TLS证书验证被禁用的问题"><a href="#一、解决TLS证书验证被禁用的问题" class="headerlink" title="一、解决TLS证书验证被禁用的问题"></a><strong>一、解决TLS证书验证被禁用的问题</strong></h3><p>为了确保Git通过HTTPS连接的安全性，建议启用TLS证书验证。请按照以下步骤操作：</p><ol><li><p><strong>检查Git配置中TLS验证的状态：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify<br></code></pre></td></tr></table></figure><ul><li>如果返回 <code>false</code>，表示TLS证书验证已被禁用。</li></ul></li><li><p><strong>启用TLS证书验证：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure></li><li><p><strong>验证更改是否生效：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify<br></code></pre></td></tr></table></figure><ul><li>确认返回值为 <code>true</code>。</li></ul></li><li><p><strong>更新Git Credential Manager（如果适用）：</strong></p><ul><li>如果您使用的是 <strong>Git Credential Manager</strong>，请更新到最新版本，以确保安全设置正确。</li></ul></li><li><p><strong>检查系统证书（如果之前因证书问题禁用验证）：</strong></p><ul><li>确保您的系统信任所连接服务器的证书。</li><li>如果有自签名证书，需要将其添加到系统的信任存储中。</li></ul></li></ol><hr><h3 id="二、指定要拉取的分支"><a href="#二、指定要拉取的分支" class="headerlink" title="二、指定要拉取的分支"></a><strong>二、指定要拉取的分支</strong></h3><p>由于当前分支未配置上游（跟踪）分支，Git不知道要从远程仓库的哪个分支拉取。您可以采取以下方法：</p><ol><li><p><strong>查看当前所在的分支：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch<br></code></pre></td></tr></table></figure><ul><li>当前分支会有一个 <code>*</code> 号标记。</li></ul></li><li><p><strong>设置当前分支的上游（跟踪）分支：</strong></p><ul><li><p>假设您的当前分支是 <code>main</code>，并希望跟踪远程的 <code>origin/main</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch --set-upstream-to=origin/main<br></code></pre></td></tr></table></figure></li><li><p>这样，Git就知道在执行 <code>git pull</code> 时默认拉取 <code>origin/main</code>。</p></li></ul></li><li><p><strong>在拉取时明确指定远程和分支：</strong></p><ul><li><p>如果您不想设置上游分支，可以在每次拉取时指定：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git pull origin main<br></code></pre></td></tr></table></figure><ul><li>将 <code>main</code> 替换为您需要的分支名称。</li></ul></li></ul></li><li><p><strong>更新本地分支列表（可选）：</strong></p><ul><li><p>如果您刚刚创建了远程分支，可能需要更新本地的分支列表：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git fetch origin<br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>检查远程分支列表：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch -r<br></code></pre></td></tr></table></figure><ul><li>这将列出所有远程分支，确保您指定的分支存在。</li></ul></li></ol><hr><p><strong>示例：</strong></p><p>假设您想在本地的 <code>dev</code> 分支上拉取远程的 <code>origin/dev</code> 分支：</p><ol><li><p><strong>切换到 <code>dev</code> 分支（如果尚未在该分支）：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git checkout dev<br></code></pre></td></tr></table></figure></li><li><p><strong>设置上游分支：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch --set-upstream-to=origin/dev<br></code></pre></td></tr></table></figure></li><li><p><strong>执行拉取：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git pull<br></code></pre></td></tr></table></figure></li></ol><hr><p><strong>注意事项：</strong></p><ul><li><p><strong>保持Git版本最新：</strong> 确保您使用的是最新版本的Git客户端，以获得最佳的安全性和功能支持。</p></li><li><p><strong>定期检查配置：</strong> 使用 <code>git config --list</code> 查看所有配置项，确保没有错误设置。</p></li><li><p><strong>安全警告的重要性：</strong> TLS证书验证对于保护数据传输的安全性至关重要，不建议在非必要情况下禁用。</p></li></ul><hr><p><strong>总结：</strong></p><ol><li><p><strong>启用TLS证书验证，确保连接安全。</strong></p></li><li><p><strong>为当前分支设置上游（跟踪）分支，或在拉取时明确指定分支名称。</strong></p></li></ol>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>git</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>【hexo】建立个人blog</title>
     <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E3%80%90hexo%E3%80%91%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BAblog/"/>
     <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E3%80%90hexo%E3%80%91%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BAblog/</url>
@@ -84,6 +65,25 @@
   
   
   <entry>
+    <title>git拉取问题</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/git%E6%8B%89%E5%8F%96%E9%97%AE%E9%A2%98/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/git%E6%8B%89%E5%8F%96%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git.exe pull -v --progress &quot;origin&quot; warning: ----------------- SECURITY WARNING ---------------- warning: | TLS certificate verification has been disabled! | warning: --------------------------------------------------- warning: HTTPS connections may not be secure. See https://aka.ms/gcm/tlsverify for more information. POST git-upload-pack (165 bytes) From https://gitee.com/addpd/obsidian_data_backups = [up to date] main -&gt; origin/main = [up to date] master -&gt; origin/master You asked to pull from the remote &#x27;origin&#x27;, but did not specify a branch. Because this is not the default configured remote for your current branch, you must specify a branch on the command line.<br></code></pre></td></tr></table></figure><p><strong>问题分析：</strong></p><p>您在执行 <code>git pull</code> 命令时遇到了以下两个主要问题：</p><ol><li><p><strong>TLS证书验证被禁用的警告：</strong></p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-built_in">warning</span>: <span class="hljs-comment">----------------- SECURITY WARNING ----------------</span><br><span class="hljs-built_in">warning</span>: | TLS certificate verification has been disabled! |<br><span class="hljs-built_in">warning</span>: <span class="hljs-comment">---------------------------------------------------</span><br><span class="hljs-built_in">warning</span>: HTTPS connections may <span class="hljs-keyword">not</span> be secure. See https://aka.ms/gcm/tlsverify <span class="hljs-keyword">for</span> more information.<br></code></pre></td></tr></table></figure><p>这表示您的Git配置中已禁用了TLS证书验证，这可能导致HTTPS连接不安全。</p></li><li><p><strong>未指定要pull的分支：</strong></p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">You asked <span class="hljs-built_in">to</span> pull <span class="hljs-built_in">from</span> <span class="hljs-keyword">the</span> remote <span class="hljs-string">&#x27;origin&#x27;</span>, but did <span class="hljs-keyword">not</span> specify<br><span class="hljs-keyword">a</span> branch. Because this is <span class="hljs-keyword">not</span> <span class="hljs-keyword">the</span> default configured remote<br><span class="hljs-keyword">for</span> your current branch, you must specify <span class="hljs-keyword">a</span> branch <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">command</span> <span class="hljs-title">line</span>.<br></code></pre></td></tr></table></figure><p>这表示您尝试从远程仓库 <code>origin</code> 拉取，但未指定分支，而当前分支未配置默认的跟踪分支。</p></li></ol><hr><p><strong>解决方案：</strong></p><h3 id="一、解决TLS证书验证被禁用的问题"><a href="#一、解决TLS证书验证被禁用的问题" class="headerlink" title="一、解决TLS证书验证被禁用的问题"></a><strong>一、解决TLS证书验证被禁用的问题</strong></h3><p>为了确保Git通过HTTPS连接的安全性，建议启用TLS证书验证。请按照以下步骤操作：</p><ol><li><p><strong>检查Git配置中TLS验证的状态：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify<br></code></pre></td></tr></table></figure><ul><li>如果返回 <code>false</code>，表示TLS证书验证已被禁用。</li></ul></li><li><p><strong>启用TLS证书验证：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure></li><li><p><strong>验证更改是否生效：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify<br></code></pre></td></tr></table></figure><ul><li>确认返回值为 <code>true</code>。</li></ul></li><li><p><strong>更新Git Credential Manager（如果适用）：</strong></p><ul><li>如果您使用的是 <strong>Git Credential Manager</strong>，请更新到最新版本，以确保安全设置正确。</li></ul></li><li><p><strong>检查系统证书（如果之前因证书问题禁用验证）：</strong></p><ul><li>确保您的系统信任所连接服务器的证书。</li><li>如果有自签名证书，需要将其添加到系统的信任存储中。</li></ul></li></ol><hr><h3 id="二、指定要拉取的分支"><a href="#二、指定要拉取的分支" class="headerlink" title="二、指定要拉取的分支"></a><strong>二、指定要拉取的分支</strong></h3><p>由于当前分支未配置上游（跟踪）分支，Git不知道要从远程仓库的哪个分支拉取。您可以采取以下方法：</p><ol><li><p><strong>查看当前所在的分支：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch<br></code></pre></td></tr></table></figure><ul><li>当前分支会有一个 <code>*</code> 号标记。</li></ul></li><li><p><strong>设置当前分支的上游（跟踪）分支：</strong></p><ul><li><p>假设您的当前分支是 <code>main</code>，并希望跟踪远程的 <code>origin/main</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch --set-upstream-to=origin/main<br></code></pre></td></tr></table></figure></li><li><p>这样，Git就知道在执行 <code>git pull</code> 时默认拉取 <code>origin/main</code>。</p></li></ul></li><li><p><strong>在拉取时明确指定远程和分支：</strong></p><ul><li><p>如果您不想设置上游分支，可以在每次拉取时指定：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git pull origin main<br></code></pre></td></tr></table></figure><ul><li>将 <code>main</code> 替换为您需要的分支名称。</li></ul></li></ul></li><li><p><strong>更新本地分支列表（可选）：</strong></p><ul><li><p>如果您刚刚创建了远程分支，可能需要更新本地的分支列表：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git fetch origin<br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>检查远程分支列表：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch -r<br></code></pre></td></tr></table></figure><ul><li>这将列出所有远程分支，确保您指定的分支存在。</li></ul></li></ol><hr><p><strong>示例：</strong></p><p>假设您想在本地的 <code>dev</code> 分支上拉取远程的 <code>origin/dev</code> 分支：</p><ol><li><p><strong>切换到 <code>dev</code> 分支（如果尚未在该分支）：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git checkout dev<br></code></pre></td></tr></table></figure></li><li><p><strong>设置上游分支：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git branch --set-upstream-to=origin/dev<br></code></pre></td></tr></table></figure></li><li><p><strong>执行拉取：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git pull<br></code></pre></td></tr></table></figure></li></ol><hr><p><strong>注意事项：</strong></p><ul><li><p><strong>保持Git版本最新：</strong> 确保您使用的是最新版本的Git客户端，以获得最佳的安全性和功能支持。</p></li><li><p><strong>定期检查配置：</strong> 使用 <code>git config --list</code> 查看所有配置项，确保没有错误设置。</p></li><li><p><strong>安全警告的重要性：</strong> TLS证书验证对于保护数据传输的安全性至关重要，不建议在非必要情况下禁用。</p></li></ul><hr><p><strong>总结：</strong></p><ol><li><p><strong>启用TLS证书验证，确保连接安全。</strong></p></li><li><p><strong>为当前分支设置上游（跟踪）分支，或在拉取时明确指定分支名称。</strong></p></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用calibre转移kindle书籍</title>
     <link href="/2024/10/16/obsidian_data/%F0%9F%9B%A0%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8%E4%B8%8E%E7%BB%B4%E4%BF%AE/%E4%BD%BF%E7%94%A8calibre%E8%BD%AC%E7%A7%BBkindle%E4%B9%A6%E7%B1%8D/"/>
     <url>/2024/10/16/obsidian_data/%F0%9F%9B%A0%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87%E4%BD%BF%E7%94%A8%E4%B8%8E%E7%BB%B4%E4%BF%AE/%E4%BD%BF%E7%94%A8calibre%E8%BD%AC%E7%A7%BBkindle%E4%B9%A6%E7%B1%8D/</url>
@@ -95,6 +95,29 @@
     <tags>
       
       <tag>kindle</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用腾讯云cos存储作为图床</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/%E4%BD%BF%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91cos%E5%AD%98%E5%82%A8%E4%BD%9C%E4%B8%BA%E5%9B%BE%E5%BA%8A/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/%E4%BD%BF%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91cos%E5%AD%98%E5%82%A8%E4%BD%9C%E4%B8%BA%E5%9B%BE%E5%BA%8A/</url>
+    
+    <content type="html"><![CDATA[<ol><li>开通：腾讯云COS</li><li>下载：PicGo</li><li>PicGo配置腾讯云COS的密钥（<a href="https://console.cloud.tencent.com/cam/capi">密钥管理 - 常用工具 - 人脸核身 - 控制台 (tencent.com)</a>）</li><li>使用图床的时候要picgo是运行的否则上传不了</li><li>obsidian安装 image auto upload 插件即可（什么都不用改）</li><li>配置完成即可上传（都会出现上传弹框）：<ol><li>剪切板粘贴</li><li>图片拖拽到文章中</li></ol></li></ol><p>参考教程：<a href="https://www.bilibili.com/video/BV1pB4y1n7gM/?vd_source=6a8ff9295cd5c06e70b3b428d8fbd4c3">【Obsidian绝配！】为你的Ob搭建专属图床，保姆级教程！再也不用担心图片管理了！_哔哩哔哩_bilibili</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>obsidian</tag>
+      
+      <tag>图床</tag>
+      
+      <tag>数据云存储</tag>
       
     </tags>
     
@@ -126,87 +149,11 @@
   
   
   <entry>
-    <title>使用腾讯云cos存储作为图床</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/%E4%BD%BF%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91cos%E5%AD%98%E5%82%A8%E4%BD%9C%E4%B8%BA%E5%9B%BE%E5%BA%8A/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/%E4%BD%BF%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91cos%E5%AD%98%E5%82%A8%E4%BD%9C%E4%B8%BA%E5%9B%BE%E5%BA%8A/</url>
-    
-    <content type="html"><![CDATA[<ol><li>开通：腾讯云COS</li><li>下载：PicGo</li><li>PicGo配置腾讯云COS的密钥（<a href="https://console.cloud.tencent.com/cam/capi">密钥管理 - 常用工具 - 人脸核身 - 控制台 (tencent.com)</a>）</li><li>使用图床的时候要picgo是运行的否则上传不了</li><li>obsidian安装 image auto upload 插件即可（什么都不用改）</li><li>配置完成即可上传（都会出现上传弹框）：<ol><li>剪切板粘贴</li><li>图片拖拽到文章中</li></ol></li></ol><p>参考教程：<a href="https://www.bilibili.com/video/BV1pB4y1n7gM/?vd_source=6a8ff9295cd5c06e70b3b428d8fbd4c3">【Obsidian绝配！】为你的Ob搭建专属图床，保姆级教程！再也不用担心图片管理了！_哔哩哔哩_bilibili</a></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>obsidian</tag>
-      
-      <tag>数据云存储</tag>
-      
-      <tag>图床</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>dependencies和devDependencies的区别</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
-    
-    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>vscode &amp; obsidian 设置组合符号</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/</url>
-    
-    <content type="html"><![CDATA[<p>下载FiraCode字体并安装,并在 vscode 和 obsidian 中配置</p><h1 id="一、FiraCode字体下载与安装"><a href="#一、FiraCode字体下载与安装" class="headerlink" title="一、FiraCode字体下载与安装"></a>一、FiraCode字体下载与安装</h1><ol><li>下载 FiraCode 字体<ul><li>下载地址：<a href="https://github.com/tonsky/FiraCode/blob/master/README_CN.md#%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85">https://github.com/tonsky/FiraCode/blob/master/README_CN.md#下载和安装</a></li></ul></li><li>安装<br> <code>Fira_Code_v6.2</code> 解压后有多个字体文件夹，如果没有其他需要就进入 <code>ttf</code> 文件夹中 全选 -&gt; 右键 -&gt; 安装<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403096.png" alt="|450|600|600"><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403097.png" alt="|450|600|600"></li></ol><h1 id="二、在软件中配置FiraCode字体"><a href="#二、在软件中配置FiraCode字体" class="headerlink" title="二、在软件中配置FiraCode字体"></a>二、在软件中配置FiraCode字体</h1><h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403098.png" alt="|525|600|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403099.png" alt="|525|600|600"><br><code>editor.fontfamily</code> 配置字体，优先字体放在前面<br><code>editor.fontLigatures</code> 配置组合符号是否开启，还可根据自己需要设置变体：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><h2 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h2><ol><li><p>字体配置<br> 设置 -&gt; 外观 -&gt; 字体<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403100.png" alt="|525|600|600"></p></li><li><p>字符变体配置<br> 设置 -&gt; 外观 -&gt; css代码片段</p><p> 新增css文件（名字自定义）：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403101.png" alt="|500|600|600"></p><p> 输入：<code>body&#123; font-feature-settings: &quot;ss02&quot;, &quot;ss08&quot;; &#125;</code><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403102.png" alt="|500|600|600"><br> 注：vscode配置和css配置不同，请注意<strong>引号</strong>，详情见：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets#vs-code">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><p> 然后开启：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403103.png" alt="|500|600|600"></p></li></ol><h1 id="三、补充信息"><a href="#三、补充信息" class="headerlink" title="三、补充信息"></a>三、补充信息</h1><ul><li><a href="https://github.com/tonsky/FiraCode/discussions/1275">variable_ttf和ttf有什么区别？</a></li></ul>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-      <tag>字体</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>vscode 工作区配置插件 配置不同工作环境</title>
     <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E5%B7%A5%E4%BD%9C%E5%8C%BA%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6%20%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/"/>
     <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E5%B7%A5%E4%BD%9C%E5%8C%BA%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6%20%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/</url>
     
     <content type="html"><![CDATA[<p>背景：<br>公司中老项目都是用的vue2，新项目用的vue3，在vscode中，vue2用的插件是Vetur，vue3用的插件是Vue Language Features (Volar)，这就导致打开vue2的时候需要禁用Volar，打开vue3的时候需要禁用Vetur。而vscode提供了工作区的概念，可以给每个工作区配置不用的插件，形成不同的工作环境。</p><p>使用：</p><ol><li><p>打开文件夹</p></li><li><p>左上角【文件】-【将工作区另存为】-选择合适位置-【保存】</p></li><li><p>左上角【文件】-【首选项】-【设置】可以看到工作区是否创建成功</p></li><li><p>找到想要配置的插件，禁用&#x2F;启用到对应工作区即可</p></li></ol><p>建好工作区后，以后同配置的文件夹，可以直接拖到对应的工作区，即可享受相同的配置。</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>vscode 打开多个文件多行显示</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%9A%E8%A1%8C%E6%98%BE%E7%A4%BA/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%9A%E8%A1%8C%E6%98%BE%E7%A4%BA/</url>
-    
-    <content type="html"><![CDATA[<p>ctrl + shift + p 输入  wrap tabs 选择自动换行<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403439.png" alt="|600"></p>]]></content>
     
     
     
@@ -240,17 +187,19 @@
   
   
   <entry>
-    <title>vscode 自定义代码注释颜色</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E9%A2%9C%E8%89%B2/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E9%A2%9C%E8%89%B2/</url>
+    <title>vscode &amp; obsidian 设置组合符号</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/</url>
     
-    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>下载FiraCode字体并安装,并在 vscode 和 obsidian 中配置</p><h1 id="一、FiraCode字体下载与安装"><a href="#一、FiraCode字体下载与安装" class="headerlink" title="一、FiraCode字体下载与安装"></a>一、FiraCode字体下载与安装</h1><ol><li>下载 FiraCode 字体<ul><li>下载地址：<a href="https://github.com/tonsky/FiraCode/blob/master/README_CN.md#%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85">https://github.com/tonsky/FiraCode/blob/master/README_CN.md#下载和安装</a></li></ul></li><li>安装<br> <code>Fira_Code_v6.2</code> 解压后有多个字体文件夹，如果没有其他需要就进入 <code>ttf</code> 文件夹中 全选 -&gt; 右键 -&gt; 安装<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403096.png" alt="|450|600|600"><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403097.png" alt="|450|600|600"></li></ol><h1 id="二、在软件中配置FiraCode字体"><a href="#二、在软件中配置FiraCode字体" class="headerlink" title="二、在软件中配置FiraCode字体"></a>二、在软件中配置FiraCode字体</h1><h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403098.png" alt="|525|600|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403099.png" alt="|525|600|600"><br><code>editor.fontfamily</code> 配置字体，优先字体放在前面<br><code>editor.fontLigatures</code> 配置组合符号是否开启，还可根据自己需要设置变体：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><h2 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h2><ol><li><p>字体配置<br> 设置 -&gt; 外观 -&gt; 字体<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403100.png" alt="|525|600|600"></p></li><li><p>字符变体配置<br> 设置 -&gt; 外观 -&gt; css代码片段</p><p> 新增css文件（名字自定义）：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403101.png" alt="|500|600|600"></p><p> 输入：<code>body&#123; font-feature-settings: &quot;ss02&quot;, &quot;ss08&quot;; &#125;</code><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403102.png" alt="|500|600|600"><br> 注：vscode配置和css配置不同，请注意<strong>引号</strong>，详情见：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets#vs-code">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><p> 然后开启：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403103.png" alt="|500|600|600"></p></li></ol><h1 id="三、补充信息"><a href="#三、补充信息" class="headerlink" title="三、补充信息"></a>三、补充信息</h1><ul><li><a href="https://github.com/tonsky/FiraCode/discussions/1275">variable_ttf和ttf有什么区别？</a></li></ul>]]></content>
     
     
     
     <tags>
       
       <tag>vscode</tag>
+      
+      <tag>字体</tag>
       
     </tags>
     
@@ -280,17 +229,36 @@
   
   
   <entry>
-    <title>自动切换深浅主题模式</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E6%B7%B1%E6%B5%85%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%BC%8F/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E6%B7%B1%E6%B5%85%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%BC%8F/</url>
+    <title>vscode 打开多个文件多行显示</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%9A%E8%A1%8C%E6%98%BE%E7%A4%BA/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%9A%E8%A1%8C%E6%98%BE%E7%A4%BA/</url>
     
-    <content type="html"><![CDATA[<h1 id="（新）使用软件切换"><a href="#（新）使用软件切换" class="headerlink" title="（新）使用软件切换"></a>（新）使用软件切换</h1><p>使用开源软件 Auto Dark Mode 自动切换主题<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410231204813.png" alt="image.png|600"><br><a href="https://github.com/AutoDarkMode/Windows-Auto-Night-Mode">AutoDarkMode&#x2F;Windows-Auto-Night-Mode：在 Windows 10 和 Windows 11 的深色和浅色主题之间自动切换 — AutoDarkMode&#x2F;Windows-Auto-Night-Mode: Automatically switches between the dark and light theme of Windows 10 and Windows 11 (github.com)</a></p><h1 id="（旧）任务栏切换"><a href="#（旧）任务栏切换" class="headerlink" title="（旧）任务栏切换"></a>（旧）任务栏切换</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell">reg.exe<br>应用深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 0 /f<br>应用浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 1 /f<br><br>开始菜单等深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 0 /f<br>开始菜单等浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 1 /f<br></code></pre></td></tr></table></figure><ol><li>打开任务计划程序<ol><li>我的电脑右键管理打开</li><li>或用utools输入”任务计划程序”打开</li></ol></li><li>创建基本任务<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344222.png" alt="Pasted image 20221028221214|600"></li></ol></li><li>输入启动的程序和参数<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344223.png" alt="Pasted image 20221028221416|600"></li></ol></li><li>设置计划过了时间也启动<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344224.png" alt="Pasted image 20221028221505|600"></li></ol></li><li>睡眠模式启动后也会执行，只不过会延迟一会（shutdown -h是休眠模式）</li><li>隐藏任务执行时出现的cmd窗口<ol><li>选择<code>不管用户是否登录都要运行</code> 即可 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344220.png" alt="|600"></li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>ctrl + shift + p 输入  wrap tabs 选择自动换行<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403439.png" alt="|600"></p>]]></content>
     
     
     
     <tags>
       
-      <tag>win10</tag>
+      <tag>vscode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 自定义代码注释颜色</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E9%A2%9C%E8%89%B2/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A%E9%A2%9C%E8%89%B2/</url>
+    
+    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
       
     </tags>
     
@@ -312,6 +280,38 @@
       <tag>win10</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>自动切换深浅主题模式</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E6%B7%B1%E6%B5%85%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%BC%8F/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE%E6%8A%80%E5%B7%A7/win10/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E6%B7%B1%E6%B5%85%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<h1 id="（新）使用软件切换"><a href="#（新）使用软件切换" class="headerlink" title="（新）使用软件切换"></a>（新）使用软件切换</h1><p>使用开源软件 Auto Dark Mode 自动切换主题<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410231204813.png" alt="image.png|600"><br><a href="https://github.com/AutoDarkMode/Windows-Auto-Night-Mode">AutoDarkMode&#x2F;Windows-Auto-Night-Mode：在 Windows 10 和 Windows 11 的深色和浅色主题之间自动切换 — AutoDarkMode&#x2F;Windows-Auto-Night-Mode: Automatically switches between the dark and light theme of Windows 10 and Windows 11 (github.com)</a></p><h1 id="（旧）任务栏切换"><a href="#（旧）任务栏切换" class="headerlink" title="（旧）任务栏切换"></a>（旧）任务栏切换</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell">reg.exe<br>应用深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 0 /f<br>应用浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 1 /f<br><br>开始菜单等深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 0 /f<br>开始菜单等浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 1 /f<br></code></pre></td></tr></table></figure><ol><li>打开任务计划程序<ol><li>我的电脑右键管理打开</li><li>或用utools输入”任务计划程序”打开</li></ol></li><li>创建基本任务<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344222.png" alt="Pasted image 20221028221214|600"></li></ol></li><li>输入启动的程序和参数<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344223.png" alt="Pasted image 20221028221416|600"></li></ol></li><li>设置计划过了时间也启动<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344224.png" alt="Pasted image 20221028221505|600"></li></ol></li><li>睡眠模式启动后也会执行，只不过会延迟一会（shutdown -h是休眠模式）</li><li>隐藏任务执行时出现的cmd窗口<ol><li>选择<code>不管用户是否登录都要运行</code> 即可 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344220.png" alt="|600"></li></ol></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>win10</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>dependencies和devDependencies的区别</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/nodejs/dependencies%E5%92%8CdevDependencies%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    
+    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
+    
+    
     
   </entry>
   
