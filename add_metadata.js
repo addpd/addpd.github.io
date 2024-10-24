@@ -57,7 +57,7 @@ function cleanBodyContent(bodyContent) {
 function ensureTitleFirst(metadata) {
   const orderedMetadata = {};
   if (metadata.title) {
-    orderedMetadata.title = metadata.title;
+    orderedMetadata.title = metadata.title.replace(/\s+/g, '_');
   }
   for (const key in metadata) {
     if (key !== 'title') {
