@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 const yaml = require('js-yaml');
 const cliProgress = require('cli-progress');
@@ -13,9 +13,9 @@ const ignoredDirectories = ['template通用模板'];
 let modifiedFilesCount = 0;
 
 // 获取文件的创建日期，格式为 'YYYY-MM-DD HH:mm'
-function getFormattedDate(filePath) {
+async function getFormattedDate(filePath) {
   try {
-    const stats = fs.statSync(filePath);
+    const stats = await fs.stat(filePath);
     const date = new Date(stats.birthtime);
     return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
   } catch (error) {
@@ -25,23 +25,24 @@ function getFormattedDate(filePath) {
 }
 
 // 递归遍历目录，获取所有 Markdown 文件
-function getMdFiles(directory) {
+async function getMdFiles(directory) {
   let mdFiles = [];
   try {
-    const files = fs.readdirSync(directory);
+    const files = await fs.readdir(directory);
 
-    files.forEach((file) => {
+    for (const file of files) {
       const fullPath = path.join(directory, file);
-      const stats = fs.statSync(fullPath);
+      const stats = await fs.stat(fullPath);
 
       if (stats.isDirectory()) {
         if (!ignoredDirectories.includes(file)) {
-          mdFiles = mdFiles.concat(getMdFiles(fullPath));
+          const nestedMdFiles = await getMdFiles(fullPath);
+          mdFiles = mdFiles.concat(nestedMdFiles);
         }
       } else if (file.endsWith('.md')) {
         mdFiles.push(fullPath);
       }
-    });
+    }
   } catch (error) {
     console.error(`读取目录失败: ${directory}`, error);
   }
@@ -55,22 +56,16 @@ function cleanBodyContent(bodyContent) {
 
 // 确保 title 在元数据的第一行
 function ensureTitleFirst(metadata) {
-  const orderedMetadata = {};
-  if (metadata.title) {
-    orderedMetadata.title = metadata.title.replace(/\s+/g, '_');
-  }
-  for (const key in metadata) {
-    if (key !== 'title') {
-      orderedMetadata[key] = metadata[key];
-    }
-  }
-  return orderedMetadata;
+  return {
+    title: metadata.title ? metadata.title.replace(/\s+/g, '_') : '',
+    ...metadata
+  };
 }
 
 // 处理 Markdown 文件，添加元数据并清理多余换行符
-function addMetadataToFile(filePath) {
+async function addMetadataToFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content = await fs.readFile(filePath, 'utf8');
 
     let frontMatter = '';
     let bodyContent = content;
@@ -82,18 +77,17 @@ function addMetadataToFile(filePath) {
       let metadata = yaml.load(frontMatter);
 
       let updatedMetadata = false;
-      if (!metadata.title || metadata.title !== path.basename(filePath, '.md')) {
-        metadata.title = path.basename(filePath, '.md');
+      const fileName = path.basename(filePath, '.md');
+      if (!metadata.title || metadata.title !== fileName.replace(/\s+/g, '_')) {
+        metadata.title = fileName.replace(/\s+/g, '_');
         updatedMetadata = true;
       }
+
       if (!metadata.date) {
-        const date = getFormattedDate(filePath);
-        if (date) {
-          metadata.date = date;
-          updatedMetadata = true;
-        }
+        metadata.date = await getFormattedDate(filePath);
+        updatedMetadata = true;
       }
-      if (metadata.published === undefined || metadata.published === '') {
+      if (metadata.published === undefined) {
         metadata.published = false;
         updatedMetadata = true;
       }
@@ -124,7 +118,7 @@ function addMetadataToFile(filePath) {
 
       // 确保 title 在第一行
       metadata = ensureTitleFirst(metadata);
-      
+
       // 清理多余的空行
       bodyContent = cleanBodyContent(bodyContent);
 
@@ -132,17 +126,17 @@ function addMetadataToFile(filePath) {
         frontMatter = `---\n${yaml.dump(metadata)}---\n`;
         const updatedContent = frontMatter + bodyContent;
         if (updatedContent !== content) {
-          fs.writeFileSync(filePath, updatedContent, 'utf8');
+          await fs.writeFile(filePath, updatedContent, 'utf8');
           modifiedFilesCount++; // 记录改动的文件数量
         }
       }
     } else {
       const fileName = path.basename(filePath, '.md');
-      const formattedDate = getFormattedDate(filePath);
+      const formattedDate = await getFormattedDate(filePath);
 
       if (formattedDate) {
-        let metadata = {
-          title: fileName,
+        const metadata = {
+          title: fileName.replace(/\s+/g, '_'),
           date: formattedDate,
           published: false,
           top_img: '',
@@ -154,14 +148,14 @@ function addMetadataToFile(filePath) {
         };
 
         // 确保 title 在第一行
-        metadata = ensureTitleFirst(metadata);
+        const finalMetadata = ensureTitleFirst(metadata);
 
         // 清理多余的空行
         bodyContent = cleanBodyContent(bodyContent);
 
-        frontMatter = `---\n${yaml.dump(metadata)}---`;
+        frontMatter = `---\n${yaml.dump(finalMetadata)}---\n`;
         const updatedContent = frontMatter + bodyContent;
-        fs.writeFileSync(filePath, updatedContent, 'utf8');
+        await fs.writeFile(filePath, updatedContent, 'utf8');
         modifiedFilesCount++; // 记录改动的文件数量
       }
     }
@@ -171,18 +165,20 @@ function addMetadataToFile(filePath) {
 }
 
 // 主程序
-function main() {
+async function main() {
   try {
-    const mdFiles = getMdFiles(targetDirectory);
+    const mdFiles = await getMdFiles(targetDirectory);
     const totalFiles = mdFiles.length;
 
     const progressBar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
     progressBar.start(totalFiles, 0);
 
-    mdFiles.forEach((filePath, index) => {
-      addMetadataToFile(filePath);
-      progressBar.update(index + 1);
-    });
+    for (let i = 0; i < totalFiles; i++) {
+      await addMetadataToFile(mdFiles[i]);
+      if (i % 10 === 0 || i === totalFiles - 1) {
+        progressBar.update(i + 1); // 每10个文件更新一次进度条，确保最后一个文件也更新进度条
+      }
+    }
 
     progressBar.stop();
     console.log(`元数据添加完成！共修改了 ${modifiedFilesCount} 个文件。`);
