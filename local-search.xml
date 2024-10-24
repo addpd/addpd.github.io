@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>hexo 添加 gitalk 评论</title>
+    <link href="/2024/10/24/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/hexo/hexo%20%E6%B7%BB%E5%8A%A0%20gitalk%20%E8%AF%84%E8%AE%BA/"/>
+    <url>/2024/10/24/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/hexo/hexo%20%E6%B7%BB%E5%8A%A0%20gitalk%20%E8%AF%84%E8%AE%BA/</url>
+    
+    <content type="html"><![CDATA[<p>gitalk中文文档说明：<br><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk — gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk (github.com)</a></p><p>步骤：<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055619.png" alt="image.png|600"><br>点进去配置出现ID和密钥</p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055976.png" alt="image.png|600"><br>配置到这里<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242110349.png" alt="完整配置|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242107596.png" alt="错误信息|600"><br>回调地址错误，本地测试出现这个是因为本地地址是 <a href="http://localhost:4000/">http://localhost:4000/</a> ，回调地址写的是 <a href="https://addpd.github.io/">https://addpd.github.io/</a></p><p>使用 <a href="https://addpd.github.io/">https://addpd.github.io/</a> 就好了<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242157687.png" alt="对接gitalk成功|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242159382.png" alt="评论存储在issue里|600"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+      <tag>gitalk</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【hexo】使用 lighthouse 优化</title>
     <link href="/2024/10/19/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/hexo/%E3%80%90hexo%E3%80%91%E4%BD%BF%E7%94%A8%20lighthouse%20%E4%BC%98%E5%8C%96/"/>
     <url>/2024/10/19/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/hexo/%E3%80%90hexo%E3%80%91%E4%BD%BF%E7%94%A8%20lighthouse%20%E4%BC%98%E5%8C%96/</url>
@@ -84,29 +105,6 @@
   
   
   <entry>
-    <title>obsidian 使用 onedrive 同步</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/obsidian%20%E4%BD%BF%E7%94%A8%20onedrive%20%E5%90%8C%E6%AD%A5/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/obsidian%20%E4%BD%BF%E7%94%A8%20onedrive%20%E5%90%8C%E6%AD%A5/</url>
-    
-    <content type="html"><![CDATA[<p>pc 安卓 同步 使用 remote sync 插件 服务使用onodrive<br>如果使用webdev用坚果云则会有请求限制出现503<br>所以使用onedrive<br>注意：pc 安卓使用同一个仓库名称否则插件同步不上去(不过插件配置似乎没有同步上去只有插件，不过够用了有啥情况再说)<br>目前用</p><ol><li>坚果云同步备份</li><li>插件中使用remote sync多端同步</li><li>使用git 同步编写</li></ol>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>obsidian</tag>
-      
-      <tag>数据云存储</tag>
-      
-      <tag>onedrive</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>使用腾讯云cos存储作为图床</title>
     <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/%E4%BD%BF%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91cos%E5%AD%98%E5%82%A8%E4%BD%9C%E4%B8%BA%E5%9B%BE%E5%BA%8A/"/>
     <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/%E4%BD%BF%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91cos%E5%AD%98%E5%82%A8%E4%BD%9C%E4%B8%BA%E5%9B%BE%E5%BA%8A/</url>
@@ -119,9 +117,9 @@
       
       <tag>obsidian</tag>
       
-      <tag>数据云存储</tag>
-      
       <tag>图床</tag>
+      
+      <tag>数据云存储</tag>
       
     </tags>
     
@@ -149,19 +147,40 @@
   
   
   <entry>
-    <title>vscode &amp; obsidian 设置组合符号</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/</url>
+    <title>obsidian 使用 onedrive 同步</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/obsidian%20%E4%BD%BF%E7%94%A8%20onedrive%20%E5%90%8C%E6%AD%A5/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/obsidian%E7%9B%B8%E5%85%B3/obsidian%20%E4%BD%BF%E7%94%A8%20onedrive%20%E5%90%8C%E6%AD%A5/</url>
     
-    <content type="html"><![CDATA[<p>下载FiraCode字体并安装,并在 vscode 和 obsidian 中配置</p><h1 id="一、FiraCode字体下载与安装"><a href="#一、FiraCode字体下载与安装" class="headerlink" title="一、FiraCode字体下载与安装"></a>一、FiraCode字体下载与安装</h1><ol><li>下载 FiraCode 字体<ul><li>下载地址：<a href="https://github.com/tonsky/FiraCode/blob/master/README_CN.md#%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85">https://github.com/tonsky/FiraCode/blob/master/README_CN.md#下载和安装</a></li></ul></li><li>安装<br> <code>Fira_Code_v6.2</code> 解压后有多个字体文件夹，如果没有其他需要就进入 <code>ttf</code> 文件夹中 全选 -&gt; 右键 -&gt; 安装<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403096.png" alt="|450|600|600"><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403097.png" alt="|450|600|600"></li></ol><h1 id="二、在软件中配置FiraCode字体"><a href="#二、在软件中配置FiraCode字体" class="headerlink" title="二、在软件中配置FiraCode字体"></a>二、在软件中配置FiraCode字体</h1><h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403098.png" alt="|525|600|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403099.png" alt="|525|600|600"><br><code>editor.fontfamily</code> 配置字体，优先字体放在前面<br><code>editor.fontLigatures</code> 配置组合符号是否开启，还可根据自己需要设置变体：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><h2 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h2><ol><li><p>字体配置<br> 设置 -&gt; 外观 -&gt; 字体<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403100.png" alt="|525|600|600"></p></li><li><p>字符变体配置<br> 设置 -&gt; 外观 -&gt; css代码片段</p><p> 新增css文件（名字自定义）：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403101.png" alt="|500|600|600"></p><p> 输入：<code>body&#123; font-feature-settings: &quot;ss02&quot;, &quot;ss08&quot;; &#125;</code><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403102.png" alt="|500|600|600"><br> 注：vscode配置和css配置不同，请注意<strong>引号</strong>，详情见：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets#vs-code">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><p> 然后开启：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403103.png" alt="|500|600|600"></p></li></ol><h1 id="三、补充信息"><a href="#三、补充信息" class="headerlink" title="三、补充信息"></a>三、补充信息</h1><ul><li><a href="https://github.com/tonsky/FiraCode/discussions/1275">variable_ttf和ttf有什么区别？</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>pc 安卓 同步 使用 remote sync 插件 服务使用onodrive<br>如果使用webdev用坚果云则会有请求限制出现503<br>所以使用onedrive<br>注意：pc 安卓使用同一个仓库名称否则插件同步不上去(不过插件配置似乎没有同步上去只有插件，不过够用了有啥情况再说)<br>目前用</p><ol><li>坚果云同步备份</li><li>插件中使用remote sync多端同步</li><li>使用git 同步编写</li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>obsidian</tag>
+      
+      <tag>数据云存储</tag>
+      
+      <tag>onedrive</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 修改状态栏底部和字体的颜色</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/</url>
+    
+    <content type="html"><![CDATA[<p>点击齿轮进入<code>setting</code><br>搜索<code>workbench.colorCustomizations</code>，然后点击编辑<code>setting.json</code></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;workbench.colorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-comment">//状态栏背景颜色</span><br>    <span class="hljs-attr">&quot;statusBar.background&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.noFolderBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.debuggingBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.foreground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#DBDBDB&quot;</span> <span class="hljs-comment">//底部栏字体颜色</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><p>字体颜色属性：<code>&quot;statusBar.foreground&quot;</code><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403513.png" alt="|600"></p>]]></content>
     
     
     
     <tags>
       
       <tag>vscode</tag>
-      
-      <tag>字体</tag>
       
     </tags>
     
@@ -208,17 +227,40 @@
   
   
   <entry>
-    <title>vscode 修改状态栏底部和字体的颜色</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BA%95%E9%83%A8%E5%92%8C%E5%AD%97%E4%BD%93%E7%9A%84%E9%A2%9C%E8%89%B2/</url>
+    <title>vscode &amp; obsidian 设置组合符号</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20&amp;%20obsidian%20%E8%AE%BE%E7%BD%AE%E7%BB%84%E5%90%88%E7%AC%A6%E5%8F%B7/</url>
     
-    <content type="html"><![CDATA[<p>点击齿轮进入<code>setting</code><br>搜索<code>workbench.colorCustomizations</code>，然后点击编辑<code>setting.json</code></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;workbench.colorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-comment">//状态栏背景颜色</span><br>    <span class="hljs-attr">&quot;statusBar.background&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.noFolderBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.debuggingBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.foreground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#DBDBDB&quot;</span> <span class="hljs-comment">//底部栏字体颜色</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><p>字体颜色属性：<code>&quot;statusBar.foreground&quot;</code><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403513.png" alt="|600"></p>]]></content>
+    <content type="html"><![CDATA[<p>下载FiraCode字体并安装,并在 vscode 和 obsidian 中配置</p><h1 id="一、FiraCode字体下载与安装"><a href="#一、FiraCode字体下载与安装" class="headerlink" title="一、FiraCode字体下载与安装"></a>一、FiraCode字体下载与安装</h1><ol><li>下载 FiraCode 字体<ul><li>下载地址：<a href="https://github.com/tonsky/FiraCode/blob/master/README_CN.md#%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85">https://github.com/tonsky/FiraCode/blob/master/README_CN.md#下载和安装</a></li></ul></li><li>安装<br> <code>Fira_Code_v6.2</code> 解压后有多个字体文件夹，如果没有其他需要就进入 <code>ttf</code> 文件夹中 全选 -&gt; 右键 -&gt; 安装<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403096.png" alt="|450|600|600"><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403097.png" alt="|450|600|600"></li></ol><h1 id="二、在软件中配置FiraCode字体"><a href="#二、在软件中配置FiraCode字体" class="headerlink" title="二、在软件中配置FiraCode字体"></a>二、在软件中配置FiraCode字体</h1><h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403098.png" alt="|525|600|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403099.png" alt="|525|600|600"><br><code>editor.fontfamily</code> 配置字体，优先字体放在前面<br><code>editor.fontLigatures</code> 配置组合符号是否开启，还可根据自己需要设置变体：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><h2 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h2><ol><li><p>字体配置<br> 设置 -&gt; 外观 -&gt; 字体<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403100.png" alt="|525|600|600"></p></li><li><p>字符变体配置<br> 设置 -&gt; 外观 -&gt; css代码片段</p><p> 新增css文件（名字自定义）：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403101.png" alt="|500|600|600"></p><p> 输入：<code>body&#123; font-feature-settings: &quot;ss02&quot;, &quot;ss08&quot;; &#125;</code><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403102.png" alt="|500|600|600"><br> 注：vscode配置和css配置不同，请注意<strong>引号</strong>，详情见：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets#vs-code">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><p> 然后开启：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403103.png" alt="|500|600|600"></p></li></ol><h1 id="三、补充信息"><a href="#三、补充信息" class="headerlink" title="三、补充信息"></a>三、补充信息</h1><ul><li><a href="https://github.com/tonsky/FiraCode/discussions/1275">variable_ttf和ttf有什么区别？</a></li></ul>]]></content>
     
     
     
     <tags>
       
       <tag>vscode</tag>
+      
+      <tag>字体</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 解决tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发</title>
+    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%A7%A3%E5%86%B3tailwindcss%E5%9C%A8%E7%BC%96%E8%BE%91class%E5%86%85%E5%AE%B9%E6%97%B6%EF%BC%8C%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA%E4%B8%8D%E8%A7%A6%E5%8F%91%EF%BC%8C%E6%88%96%E8%80%85%E9%9C%80%E8%A6%81%E7%A9%BA%E6%A0%BC%E6%89%8D%E8%83%BD%E8%A7%A6%E5%8F%91/"/>
+    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%A7%A3%E5%86%B3tailwindcss%E5%9C%A8%E7%BC%96%E8%BE%91class%E5%86%85%E5%AE%B9%E6%97%B6%EF%BC%8C%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA%E4%B8%8D%E8%A7%A6%E5%8F%91%EF%BC%8C%E6%88%96%E8%80%85%E9%9C%80%E8%A6%81%E7%A9%BA%E6%A0%BC%E6%89%8D%E8%83%BD%E8%A7%A6%E5%8F%91/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_44832068/article/details/126575775">解决vscode tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发-CSDN博客</a><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403799.png" alt="|600"><br><code>ctrl+,</code> 输入 <code>editor.quickSuggestions</code> 将 <code>strings</code> 从 <code>off</code> 改为 <code>on</code></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">123<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
+      
+      <tag>tailwindcss</tag>
       
     </tags>
     
@@ -253,27 +295,6 @@
     <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
     
     
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>vscode 解决tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发</title>
-    <link href="/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%A7%A3%E5%86%B3tailwindcss%E5%9C%A8%E7%BC%96%E8%BE%91class%E5%86%85%E5%AE%B9%E6%97%B6%EF%BC%8C%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA%E4%B8%8D%E8%A7%A6%E5%8F%91%EF%BC%8C%E6%88%96%E8%80%85%E9%9C%80%E8%A6%81%E7%A9%BA%E6%A0%BC%E6%89%8D%E8%83%BD%E8%A7%A6%E5%8F%91/"/>
-    <url>/2024/10/16/obsidian_data/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95%E5%92%8C%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF/vscode/vscode%20%E8%A7%A3%E5%86%B3tailwindcss%E5%9C%A8%E7%BC%96%E8%BE%91class%E5%86%85%E5%AE%B9%E6%97%B6%EF%BC%8C%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA%E4%B8%8D%E8%A7%A6%E5%8F%91%EF%BC%8C%E6%88%96%E8%80%85%E9%9C%80%E8%A6%81%E7%A9%BA%E6%A0%BC%E6%89%8D%E8%83%BD%E8%A7%A6%E5%8F%91/</url>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_44832068/article/details/126575775">解决vscode tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发-CSDN博客</a><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403799.png" alt="|600"><br><code>ctrl+,</code> 输入 <code>editor.quickSuggestions</code> 将 <code>strings</code> 从 <code>off</code> 改为 <code>on</code></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">123<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-      <tag>tailwindcss</tag>
-      
-    </tags>
     
   </entry>
   
