@@ -804,7 +804,7 @@ gitalk:
   perPage: 10
   pagerDirection: last
   distractionFreeMode: false
-  createIssueManually: true
+  createIssueManually: false
   # 默认 proxy 可能会失效，解决方法请见下方链接
   # The default proxy may be invalid, refer to the links for solutions
   # https://github.com/gitalk/gitalk/issues/429
