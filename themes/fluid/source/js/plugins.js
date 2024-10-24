@@ -91,6 +91,7 @@ Fluid.plugins = {
       } else {
         var imageTitle = $target.attr('title') || $target.attr('alt');
         if (imageTitle && !imageTitle.startsWith("image.png|")) {
+          imageTitle = imageTitle.includes("|")?imageTitle.split('|').slice(0, -1).join('|'):imageTitle;
           $target.after(`<figcaption aria-hidden="true" class="image-caption">${imageTitle}</figcaption>`);
         }
       }

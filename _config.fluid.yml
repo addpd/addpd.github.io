@@ -258,7 +258,7 @@ web_analytics:
   # Google Analytics 4 MEASUREMENT_ID
   # See: https://support.google.com/analytics/answer/9744165#zippy=%2Cin-this-article
   google:
-    measurement_id: G-GEFHFY35Z0
+    measurement_id: # G-GEFHFY35Z0
 
   # 腾讯统计的 H5 App ID，开启高级功能才有cid
   # Tencent analytics, set APP ID
@@ -288,27 +288,27 @@ web_analytics:
   umami:
     # umami js 文件地址，需要在 umami 后台创建站点后获取
     # umami js file url, get after create website in umami
-    src:
+    src: https://cloud.umami.is/script.js
 
     # umami 的 website id，需要在 umami 后台创建站点后获取
     # umami website id, get after create website in umami
-    website_id:
+    website_id: ad42c0d3-97c3-4f44-be89-418431ff2a0e
 
     # 如果你只想统计特定的域名可以填入此字段，多个域名通过逗号分隔，这可以避免统计 localhost。
     # If you only want to tracker to specific domains you can fill in this field, multiple domain names are separated by commas, which can avoid tracker localhost
-    domains:
+    domains: addpd.github.io
 
     # 用于统计 PV UV 的开始时间，格式为 "YYYY-MM-DD"
     # statistics on the start time, the format is "YYYY-MM-DD"
-    start_time: 2024-01-01
+    start_time: 2024-10-23
 
     # 新建一个 umami viewOnly 用户，然后通过 login api 获取该用户 token
     # create an umami viewOnly user, and then get user token through the login api
-    token:
+    token: FQS4LpTHiPQvcxmcFfwbUy7zdYRyCYqq
 
     # 填写 umami 部署的服务器地址，如 "https://umami.example.com"
     # server url of umami deployment, such as "https://umami.example.com"
-    api_server:
+    api_server: https://cloud.umami.is
 
 # Canonical 用于向 Google 搜索指定规范网址，开启前确保 hexo _config.yml 中配置 `url: http://yourdomain.com`
 # Canonical, to specify a canonical URL for Google Search, need to set up `url: http://yourdomain.com` in hexo _config.yml
@@ -751,11 +751,11 @@ post:
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
-    type: disqus
+    type: gitalk
 
 
 #---------------------------
@@ -794,11 +794,11 @@ disqus:
 # Based on GitHub Issues
 # See: https://github.com/gitalk/gitalk#options
 gitalk:
-  clientID:
-  clientSecret:
-  repo:
-  owner:
-  admin: ['name']
+  clientID: Ov23liJTP3hNlVb72F4b
+  clientSecret: 8ca98e63794757e72eb9db34b3d01b1829079b2d
+  repo: addpd.github.io.comment
+  owner: addpd
+  admin: ['addpd']
   language: zh-CN
   labels: ['Gitalk']
   perPage: 10
@@ -816,11 +816,12 @@ gitalk:
 # Based on LeanCloud
 # See: https://valine.js.org/
 valine:
-  appId:
-  appKey:
+  appId: DpD10orpJMKJCgeVGLYz1poF-gzGzoHsz
+  appKey: Dhf51zOLSIBRmJCO6f6GZ4HM
   path: window.location.pathname
-  placeholder:
+  placeholder: Just to go
   avatar: 'retro'
+  avatar_cdn: 'https://cravatar.cn/avatar/' #// 自定义avatar cdn
   meta: ['nick', 'mail', 'link']
   requiredFields: []
   pageSize: 10

@@ -38,5 +38,5 @@ hexo deploy
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 
-![image.png|600](https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410222331413.png)
+![我是一个测试图片描述|600](https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410222331413.png)
 ![image.png|600](https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410222331413.png)
