@@ -170,19 +170,6 @@
   
   
   <entry>
-    <title>dependencies和devDependencies的区别</title>
-    <link href="/posts/f3da8d84.html"/>
-    <url>/posts/f3da8d84.html</url>
-    
-    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>vscode &amp; obsidian 设置组合符号</title>
     <link href="/posts/276bc365.html"/>
     <url>/posts/276bc365.html</url>
@@ -204,49 +191,11 @@
   
   
   <entry>
-    <title>vscode 打开多个文件多行显示</title>
-    <link href="/posts/3adf8683.html"/>
-    <url>/posts/3adf8683.html</url>
-    
-    <content type="html"><![CDATA[<p>ctrl + shift + p 输入  wrap tabs 选择自动换行<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403439.png" alt="|600"></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>vscode 修改状态栏底部和字体的颜色</title>
     <link href="/posts/64bf1957.html"/>
     <url>/posts/64bf1957.html</url>
     
     <content type="html"><![CDATA[<p>点击齿轮进入<code>setting</code><br>搜索<code>workbench.colorCustomizations</code>，然后点击编辑<code>setting.json</code></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;workbench.colorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-comment">//状态栏背景颜色</span><br>    <span class="hljs-attr">&quot;statusBar.background&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.noFolderBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.debuggingBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.foreground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#DBDBDB&quot;</span> <span class="hljs-comment">//底部栏字体颜色</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><p>字体颜色属性：<code>&quot;statusBar.foreground&quot;</code><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403513.png" alt="|600"></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>vscode 自定义代码注释颜色</title>
-    <link href="/posts/e30df4c0.html"/>
-    <url>/posts/e30df4c0.html</url>
-    
-    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     
@@ -280,19 +229,51 @@
   
   
   <entry>
-    <title>命令行修改壁纸，补充到自动切换任务中</title>
-    <link href="/posts/6ba6ac33.html"/>
-    <url>/posts/6ba6ac33.html</url>
+    <title>vscode 自定义代码注释颜色</title>
+    <link href="/posts/e30df4c0.html"/>
+    <url>/posts/e30df4c0.html</url>
     
-    <content type="html"><![CDATA[<ol><li>cmd输入regedit进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cmd输入 RunDll32<span class="hljs-selector-class">.exe</span> USER32<span class="hljs-selector-class">.DLL</span>,UpdatePerUserSystemParameters<br></code></pre></td></tr></table></figure></li><li>用命令行修改图片的方法<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">reg <span class="hljs-keyword">add</span><span class="language-bash"> <span class="hljs-string">&quot;hkcu\control panel\desktop&quot;</span> /v wallpaper /d <span class="hljs-string">&quot;新壁纸地址(绝对地址）&quot;</span> /f</span><br></code></pre></td></tr></table></figure></li><li>壁纸缓存所在位置 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">如果壁纸设置成功<br><span class="hljs-name">C</span>:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles<br>在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录<br>这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<br></code></pre></td></tr></table></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     
     <tags>
       
-      <tag>win10</tag>
+      <tag>vscode</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 打开多个文件多行显示</title>
+    <link href="/posts/3adf8683.html"/>
+    <url>/posts/3adf8683.html</url>
+    
+    <content type="html"><![CDATA[<p>ctrl + shift + p 输入  wrap tabs 选择自动换行<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403439.png" alt="|600"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>dependencies和devDependencies的区别</title>
+    <link href="/posts/f3da8d84.html"/>
+    <url>/posts/f3da8d84.html</url>
+    
+    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
+    
+    
     
   </entry>
   
@@ -312,6 +293,25 @@
       <tag>vscode</tag>
       
       <tag>tailwindcss</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>命令行修改壁纸，补充到自动切换任务中</title>
+    <link href="/posts/6ba6ac33.html"/>
+    <url>/posts/6ba6ac33.html</url>
+    
+    <content type="html"><![CDATA[<ol><li>cmd输入regedit进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cmd输入 RunDll32<span class="hljs-selector-class">.exe</span> USER32<span class="hljs-selector-class">.DLL</span>,UpdatePerUserSystemParameters<br></code></pre></td></tr></table></figure></li><li>用命令行修改图片的方法<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">reg <span class="hljs-keyword">add</span><span class="language-bash"> <span class="hljs-string">&quot;hkcu\control panel\desktop&quot;</span> /v wallpaper /d <span class="hljs-string">&quot;新壁纸地址(绝对地址）&quot;</span> /f</span><br></code></pre></td></tr></table></figure></li><li>壁纸缓存所在位置 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">如果壁纸设置成功<br><span class="hljs-name">C</span>:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles<br>在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录<br>这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<br></code></pre></td></tr></table></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>win10</tag>
       
     </tags>
     
