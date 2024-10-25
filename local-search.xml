@@ -4,11 +4,24 @@
   
   
   <entry>
+    <title></title>
+    <link href="/posts/0.html"/>
+    <url>/posts/0.html</url>
+    
+    <content type="html"><![CDATA[<p>钱当然重要，我干什么要买一个我只用一次的苹果数据线呢？要么借用，要么家里有我问下妈妈看有没有，或许叫我爸把数据线送来，反正他没事，不过明天是周末他要上课，下周呗，反正又不着急。<br>�</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【hexo】添加评论插件gitalk</title>
     <link href="/posts/8889ee03.html"/>
     <url>/posts/8889ee03.html</url>
     
-    <content type="html"><![CDATA[<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p>gitalk中文文档说明：<br><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk — gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk (github.com)</a></p><p>步骤：<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055619.png" alt="image.png|600"><br>点进去配置出现ID和密钥</p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055976.png" alt="image.png|600"><br>配置到这里<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242110349.png" alt="完整配置|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242107596.png" alt="错误信息|600"><br>回调地址错误，本地测试出现这个是因为本地地址是 <a href="http://localhost:4000/">http://localhost:4000/</a> ，回调地址写的是 <a href="https://addpd.github.io/">https://addpd.github.io/</a></p><p>使用 <a href="https://addpd.github.io/">https://addpd.github.io/</a> 就好了<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242157687.png" alt="对接gitalk成功|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242159382.png" alt="评论存储在issue里|600"></p><h1 id="每个页面需要手动创建的问题"><a href="#每个页面需要手动创建的问题" class="headerlink" title="每个页面需要手动创建的问题"></a>每个页面需要手动创建的问题</h1><p><code>createIssueManually</code>改为<code>false</code>即可</p><h1 id="回调问题"><a href="#回调问题" class="headerlink" title="回调问题"></a>回调问题</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654344.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654547.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655978.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655243.png" alt="image.png|600"></p><p>我这里测试的是因为文章标题有空格的会出现回调问题，将空格替换为 <code>_</code> 或 <code>-</code> 就好了，其他的方案仅供参考</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>gitalk中文文档说明：<br><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk — gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk (github.com)</a></p><p>步骤：<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055619.png" alt="image.png|600"><br>点进去配置出现ID和密钥</p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055976.png" alt="image.png|600"><br>配置到这里<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242110349.png" alt="完整配置|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242107596.png" alt="错误信息|600"><br>回调地址错误，本地测试出现这个是因为本地地址是 <a href="http://localhost:4000/">http://localhost:4000/</a> ，回调地址写的是 <a href="https://addpd.github.io/">https://addpd.github.io/</a></p><p>使用 <a href="https://addpd.github.io/">https://addpd.github.io/</a> 就好了<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242157687.png" alt="对接gitalk成功|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242159382.png" alt="评论存储在issue里|600"></p><h1 id="每个页面需要手动创建的问题"><a href="#每个页面需要手动创建的问题" class="headerlink" title="每个页面需要手动创建的问题"></a>每个页面需要手动创建的问题</h1><p><code>createIssueManually</code>改为<code>false</code>即可</p><h1 id="回调问题"><a href="#回调问题" class="headerlink" title="回调问题"></a>回调问题</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654344.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654547.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655978.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655243.png" alt="image.png|600"></p><h2 id="1、空格替换"><a href="#1、空格替换" class="headerlink" title="1、空格替换"></a>1、空格替换</h2><p>我这里测试的是因为文章标题有空格的会出现回调问题，将空格替换为 <code>_</code> 或 <code>-</code> 就好了，其他的方案仅供参考</p><h2 id="2、使用abbr生成文章绝对链接"><a href="#2、使用abbr生成文章绝对链接" class="headerlink" title="2、使用abbr生成文章绝对链接"></a>2、使用abbr生成文章绝对链接</h2><p>也有不用改标题的方法：使用abbr生成绝对链接，这样url就不会带有空格的标题了<br>1、安装：<code>npm install hexo-abbrlink --save</code><br>2、在 Hexo 配置文件 <code>_config.yml</code> 中启用：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">permalink:</span> <span class="hljs-string">posts/:abbrlink.html</span><br><span class="hljs-attr">abbrlink:</span><br>  <span class="hljs-attr">alg:</span> <span class="hljs-string">crc32</span>  <span class="hljs-comment"># 生成链接的算法，可以是 crc32 或 md5</span><br>  <span class="hljs-attr">rep:</span> <span class="hljs-string">hex</span>    <span class="hljs-comment"># 输出格式，可以是 hex 或 dec</span><br></code></pre></td></tr></table></figure><p>3、生成静态页面时，插件会为每篇文章生成缩写链接。<br>    例如，一篇标题为“Hexo 教程”的文章，如果启用了 <code>abbrlink</code> 插件，可能会生成一个类似于 <code>http://your-site.com/posts/abcd1234.html</code> 这样的短链接。</p>]]></content>
     
     
     
@@ -105,29 +118,6 @@
   
   
   <entry>
-    <title>使用腾讯云cos存储作为图床</title>
-    <link href="/posts/7008b29f.html"/>
-    <url>/posts/7008b29f.html</url>
-    
-    <content type="html"><![CDATA[<ol><li>开通：腾讯云COS</li><li>下载：PicGo</li><li>PicGo配置腾讯云COS的密钥（<a href="https://console.cloud.tencent.com/cam/capi">密钥管理 - 常用工具 - 人脸核身 - 控制台 (tencent.com)</a>）</li><li>使用图床的时候要picgo是运行的否则上传不了</li><li>obsidian安装 image auto upload 插件即可（什么都不用改）</li><li>配置完成即可上传（都会出现上传弹框）：<ol><li>剪切板粘贴</li><li>图片拖拽到文章中</li></ol></li></ol><p>参考教程：<a href="https://www.bilibili.com/video/BV1pB4y1n7gM/?vd_source=6a8ff9295cd5c06e70b3b428d8fbd4c3">【Obsidian绝配！】为你的Ob搭建专属图床，保姆级教程！再也不用担心图片管理了！_哔哩哔哩_bilibili</a></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>obsidian</tag>
-      
-      <tag>图床</tag>
-      
-      <tag>数据云存储</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>【hexo】建立个人blog</title>
     <link href="/posts/6b75d73b.html"/>
     <url>/posts/6b75d73b.html</url>
@@ -170,13 +160,23 @@
   
   
   <entry>
-    <title>dependencies和devDependencies的区别</title>
-    <link href="/posts/f3da8d84.html"/>
-    <url>/posts/f3da8d84.html</url>
+    <title>使用腾讯云cos存储作为图床</title>
+    <link href="/posts/7008b29f.html"/>
+    <url>/posts/7008b29f.html</url>
     
-    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
+    <content type="html"><![CDATA[<ol><li>开通：腾讯云COS</li><li>下载：PicGo</li><li>PicGo配置腾讯云COS的密钥（<a href="https://console.cloud.tencent.com/cam/capi">密钥管理 - 常用工具 - 人脸核身 - 控制台 (tencent.com)</a>）</li><li>使用图床的时候要picgo是运行的否则上传不了</li><li>obsidian安装 image auto upload 插件即可（什么都不用改）</li><li>配置完成即可上传（都会出现上传弹框）：<ol><li>剪切板粘贴</li><li>图片拖拽到文章中</li></ol></li></ol><p>参考教程：<a href="https://www.bilibili.com/video/BV1pB4y1n7gM/?vd_source=6a8ff9295cd5c06e70b3b428d8fbd4c3">【Obsidian绝配！】为你的Ob搭建专属图床，保姆级教程！再也不用担心图片管理了！_哔哩哔哩_bilibili</a></p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>obsidian</tag>
+      
+      <tag>数据云存储</tag>
+      
+      <tag>图床</tag>
+      
+    </tags>
     
   </entry>
   
@@ -242,21 +242,13 @@
   
   
   <entry>
-    <title>vscode 解决tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发</title>
-    <link href="/posts/d99a90f8.html"/>
-    <url>/posts/d99a90f8.html</url>
+    <title>dependencies和devDependencies的区别</title>
+    <link href="/posts/f3da8d84.html"/>
+    <url>/posts/f3da8d84.html</url>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_44832068/article/details/126575775">解决vscode tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发-CSDN博客</a><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403799.png" alt="|600"><br><code>ctrl+,</code> 输入 <code>editor.quickSuggestions</code> 将 <code>strings</code> 从 <code>off</code> 改为 <code>on</code></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">123<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
     
     
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-      <tag>tailwindcss</tag>
-      
-    </tags>
     
   </entry>
   
@@ -293,6 +285,27 @@
     <tags>
       
       <tag>vscode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 解决tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发</title>
+    <link href="/posts/d99a90f8.html"/>
+    <url>/posts/d99a90f8.html</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_44832068/article/details/126575775">解决vscode tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发-CSDN博客</a><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403799.png" alt="|600"><br><code>ctrl+,</code> 输入 <code>editor.quickSuggestions</code> 将 <code>strings</code> 从 <code>off</code> 改为 <code>on</code></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">123<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
+      
+      <tag>tailwindcss</tag>
       
     </tags>
     
