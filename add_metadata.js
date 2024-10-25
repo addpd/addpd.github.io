@@ -57,7 +57,7 @@ function cleanBodyContent(bodyContent) {
 // 确保 title 在元数据的第一行
 function ensureTitleFirst(metadata) {
   return {
-    title: metadata.title ? metadata.title.replace(/\s+/g, '_') : '',
+    title: metadata.title ? metadata.title : '',
     ...metadata
   };
 }
@@ -78,8 +78,8 @@ async function addMetadataToFile(filePath) {
 
       let updatedMetadata = false;
       const fileName = path.basename(filePath, '.md');
-      if (!metadata.title || metadata.title !== fileName.replace(/\s+/g, '_')) {
-        metadata.title = fileName.replace(/\s+/g, '_');
+      if (!metadata.title || metadata.title !== fileName) {
+        metadata.title = fileName;
         updatedMetadata = true;
       }
 
@@ -136,7 +136,7 @@ async function addMetadataToFile(filePath) {
 
       if (formattedDate) {
         const metadata = {
-          title: fileName.replace(/\s+/g, '_'),
+          title: fileName,
           date: formattedDate,
           published: false,
           top_img: '',

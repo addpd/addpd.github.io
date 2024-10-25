@@ -1,6 +1,14 @@
 ---
-title: no cover
+title: hello-world_copy
 published: true
+date: '2024-10-20 13:10'
+top_img: ''
+cover_img: ''
+index_img: ''
+banner_img: ''
+tags: []
+categories: []
+abbrlink: 820bffdd
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
