@@ -4,19 +4,6 @@
   
   
   <entry>
-    <title></title>
-    <link href="/posts/0.html"/>
-    <url>/posts/0.html</url>
-    
-    <content type="html"><![CDATA[<p>钱当然重要，我干什么要买一个我只用一次的苹果数据线呢？要么借用，要么家里有我问下妈妈看有没有，或许叫我爸把数据线送来，反正他没事，不过明天是周末他要上课，下周呗，反正又不着急。<br>�</p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>【hexo】添加评论插件gitalk</title>
     <link href="/posts/8889ee03.html"/>
     <url>/posts/8889ee03.html</url>
@@ -183,6 +170,19 @@
   
   
   <entry>
+    <title>dependencies和devDependencies的区别</title>
+    <link href="/posts/f3da8d84.html"/>
+    <url>/posts/f3da8d84.html</url>
+    
+    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vscode &amp; obsidian 设置组合符号</title>
     <link href="/posts/276bc365.html"/>
     <url>/posts/276bc365.html</url>
@@ -204,11 +204,11 @@
   
   
   <entry>
-    <title>vscode 工作区配置插件 配置不同工作环境</title>
-    <link href="/posts/9f4c44d8.html"/>
-    <url>/posts/9f4c44d8.html</url>
+    <title>vscode 打开多个文件多行显示</title>
+    <link href="/posts/3adf8683.html"/>
+    <url>/posts/3adf8683.html</url>
     
-    <content type="html"><![CDATA[<p>背景：<br>公司中老项目都是用的vue2，新项目用的vue3，在vscode中，vue2用的插件是Vetur，vue3用的插件是Vue Language Features (Volar)，这就导致打开vue2的时候需要禁用Volar，打开vue3的时候需要禁用Vetur。而vscode提供了工作区的概念，可以给每个工作区配置不用的插件，形成不同的工作环境。</p><p>使用：</p><ol><li><p>打开文件夹</p></li><li><p>左上角【文件】-【将工作区另存为】-选择合适位置-【保存】</p></li><li><p>左上角【文件】-【首选项】-【设置】可以看到工作区是否创建成功</p></li><li><p>找到想要配置的插件，禁用&#x2F;启用到对应工作区即可</p></li></ol><p>建好工作区后，以后同配置的文件夹，可以直接拖到对应的工作区，即可享受相同的配置。</p>]]></content>
+    <content type="html"><![CDATA[<p>ctrl + shift + p 输入  wrap tabs 选择自动换行<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403439.png" alt="|600"></p>]]></content>
     
     
     
@@ -242,19 +242,6 @@
   
   
   <entry>
-    <title>dependencies和devDependencies的区别</title>
-    <link href="/posts/f3da8d84.html"/>
-    <url>/posts/f3da8d84.html</url>
-    
-    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>vscode 自定义代码注释颜色</title>
     <link href="/posts/e30df4c0.html"/>
     <url>/posts/e30df4c0.html</url>
@@ -274,17 +261,36 @@
   
   
   <entry>
-    <title>vscode 打开多个文件多行显示</title>
-    <link href="/posts/3adf8683.html"/>
-    <url>/posts/3adf8683.html</url>
+    <title>vscode 工作区配置插件 配置不同工作环境</title>
+    <link href="/posts/9f4c44d8.html"/>
+    <url>/posts/9f4c44d8.html</url>
     
-    <content type="html"><![CDATA[<p>ctrl + shift + p 输入  wrap tabs 选择自动换行<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403439.png" alt="|600"></p>]]></content>
+    <content type="html"><![CDATA[<p>背景：<br>公司中老项目都是用的vue2，新项目用的vue3，在vscode中，vue2用的插件是Vetur，vue3用的插件是Vue Language Features (Volar)，这就导致打开vue2的时候需要禁用Volar，打开vue3的时候需要禁用Vetur。而vscode提供了工作区的概念，可以给每个工作区配置不用的插件，形成不同的工作环境。</p><p>使用：</p><ol><li><p>打开文件夹</p></li><li><p>左上角【文件】-【将工作区另存为】-选择合适位置-【保存】</p></li><li><p>左上角【文件】-【首选项】-【设置】可以看到工作区是否创建成功</p></li><li><p>找到想要配置的插件，禁用&#x2F;启用到对应工作区即可</p></li></ol><p>建好工作区后，以后同配置的文件夹，可以直接拖到对应的工作区，即可享受相同的配置。</p>]]></content>
     
     
     
     <tags>
       
       <tag>vscode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>命令行修改壁纸，补充到自动切换任务中</title>
+    <link href="/posts/6ba6ac33.html"/>
+    <url>/posts/6ba6ac33.html</url>
+    
+    <content type="html"><![CDATA[<ol><li>cmd输入regedit进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cmd输入 RunDll32<span class="hljs-selector-class">.exe</span> USER32<span class="hljs-selector-class">.DLL</span>,UpdatePerUserSystemParameters<br></code></pre></td></tr></table></figure></li><li>用命令行修改图片的方法<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">reg <span class="hljs-keyword">add</span><span class="language-bash"> <span class="hljs-string">&quot;hkcu\control panel\desktop&quot;</span> /v wallpaper /d <span class="hljs-string">&quot;新壁纸地址(绝对地址）&quot;</span> /f</span><br></code></pre></td></tr></table></figure></li><li>壁纸缓存所在位置 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">如果壁纸设置成功<br><span class="hljs-name">C</span>:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles<br>在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录<br>这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<br></code></pre></td></tr></table></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>win10</tag>
       
     </tags>
     
@@ -306,25 +312,6 @@
       <tag>vscode</tag>
       
       <tag>tailwindcss</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>命令行修改壁纸，补充到自动切换任务中</title>
-    <link href="/posts/6ba6ac33.html"/>
-    <url>/posts/6ba6ac33.html</url>
-    
-    <content type="html"><![CDATA[<ol><li>cmd输入regedit进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cmd输入 RunDll32<span class="hljs-selector-class">.exe</span> USER32<span class="hljs-selector-class">.DLL</span>,UpdatePerUserSystemParameters<br></code></pre></td></tr></table></figure></li><li>用命令行修改图片的方法<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">reg <span class="hljs-keyword">add</span><span class="language-bash"> <span class="hljs-string">&quot;hkcu\control panel\desktop&quot;</span> /v wallpaper /d <span class="hljs-string">&quot;新壁纸地址(绝对地址）&quot;</span> /f</span><br></code></pre></td></tr></table></figure></li><li>壁纸缓存所在位置 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">如果壁纸设置成功<br><span class="hljs-name">C</span>:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles<br>在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录<br>这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<br></code></pre></td></tr></table></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>win10</tag>
       
     </tags>
     
