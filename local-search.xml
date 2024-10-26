@@ -124,6 +124,29 @@
   
   
   <entry>
+    <title>使用腾讯云cos存储作为图床</title>
+    <link href="/posts/7008b29f.html"/>
+    <url>/posts/7008b29f.html</url>
+    
+    <content type="html"><![CDATA[<ol><li>开通：腾讯云COS</li><li>下载：PicGo</li><li>PicGo配置腾讯云COS的密钥（<a href="https://console.cloud.tencent.com/cam/capi">密钥管理 - 常用工具 - 人脸核身 - 控制台 (tencent.com)</a>）</li><li>使用图床的时候要picgo是运行的否则上传不了</li><li>obsidian安装 image auto upload 插件即可（什么都不用改）</li><li>配置完成即可上传（都会出现上传弹框）：<ol><li>剪切板粘贴</li><li>图片拖拽到文章中</li></ol></li></ol><p>参考教程：<a href="https://www.bilibili.com/video/BV1pB4y1n7gM/?vd_source=6a8ff9295cd5c06e70b3b428d8fbd4c3">【Obsidian绝配！】为你的Ob搭建专属图床，保姆级教程！再也不用担心图片管理了！_哔哩哔哩_bilibili</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>obsidian</tag>
+      
+      <tag>图床</tag>
+      
+      <tag>数据云存储</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>obsidian 使用 onedrive 同步</title>
     <link href="/posts/421433af.html"/>
     <url>/posts/421433af.html</url>
@@ -147,23 +170,13 @@
   
   
   <entry>
-    <title>使用腾讯云cos存储作为图床</title>
-    <link href="/posts/7008b29f.html"/>
-    <url>/posts/7008b29f.html</url>
+    <title>dependencies和devDependencies的区别</title>
+    <link href="/posts/f3da8d84.html"/>
+    <url>/posts/f3da8d84.html</url>
     
-    <content type="html"><![CDATA[<ol><li>开通：腾讯云COS</li><li>下载：PicGo</li><li>PicGo配置腾讯云COS的密钥（<a href="https://console.cloud.tencent.com/cam/capi">密钥管理 - 常用工具 - 人脸核身 - 控制台 (tencent.com)</a>）</li><li>使用图床的时候要picgo是运行的否则上传不了</li><li>obsidian安装 image auto upload 插件即可（什么都不用改）</li><li>配置完成即可上传（都会出现上传弹框）：<ol><li>剪切板粘贴</li><li>图片拖拽到文章中</li></ol></li></ol><p>参考教程：<a href="https://www.bilibili.com/video/BV1pB4y1n7gM/?vd_source=6a8ff9295cd5c06e70b3b428d8fbd4c3">【Obsidian绝配！】为你的Ob搭建专属图床，保姆级教程！再也不用担心图片管理了！_哔哩哔哩_bilibili</a></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
     
     
-    
-    <tags>
-      
-      <tag>obsidian</tag>
-      
-      <tag>数据云存储</tag>
-      
-      <tag>图床</tag>
-      
-    </tags>
     
   </entry>
   
@@ -183,6 +196,44 @@
       <tag>vscode</tag>
       
       <tag>字体</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 打开多个文件多行显示</title>
+    <link href="/posts/3adf8683.html"/>
+    <url>/posts/3adf8683.html</url>
+    
+    <content type="html"><![CDATA[<p>ctrl + shift + p 输入  wrap tabs 选择自动换行<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403439.png" alt="|600"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 自定义代码注释颜色</title>
+    <link href="/posts/e30df4c0.html"/>
+    <url>/posts/e30df4c0.html</url>
+    
+    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
       
     </tags>
     
@@ -229,78 +280,6 @@
   
   
   <entry>
-    <title>vscode 自定义代码注释颜色</title>
-    <link href="/posts/e30df4c0.html"/>
-    <url>/posts/e30df4c0.html</url>
-    
-    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>vscode 打开多个文件多行显示</title>
-    <link href="/posts/3adf8683.html"/>
-    <url>/posts/3adf8683.html</url>
-    
-    <content type="html"><![CDATA[<p>ctrl + shift + p 输入  wrap tabs 选择自动换行<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403439.png" alt="|600"></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>dependencies和devDependencies的区别</title>
-    <link href="/posts/f3da8d84.html"/>
-    <url>/posts/f3da8d84.html</url>
-    
-    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>vscode 解决tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发</title>
-    <link href="/posts/d99a90f8.html"/>
-    <url>/posts/d99a90f8.html</url>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_44832068/article/details/126575775">解决vscode tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发-CSDN博客</a><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403799.png" alt="|600"><br><code>ctrl+,</code> 输入 <code>editor.quickSuggestions</code> 将 <code>strings</code> 从 <code>off</code> 改为 <code>on</code></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">123<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-      <tag>tailwindcss</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>命令行修改壁纸，补充到自动切换任务中</title>
     <link href="/posts/6ba6ac33.html"/>
     <url>/posts/6ba6ac33.html</url>
@@ -331,6 +310,27 @@
     <tags>
       
       <tag>win10</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 解决tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发</title>
+    <link href="/posts/d99a90f8.html"/>
+    <url>/posts/d99a90f8.html</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_44832068/article/details/126575775">解决vscode tailwindcss在编辑class内容时，代码提示不触发，或者需要空格才能触发-CSDN博客</a><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403799.png" alt="|600"><br><code>ctrl+,</code> 输入 <code>editor.quickSuggestions</code> 将 <code>strings</code> 从 <code>off</code> 改为 <code>on</code></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">123<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
+      
+      <tag>tailwindcss</tag>
       
     </tags>
     
