@@ -29,9 +29,17 @@
 
 .reward-img {
     width: 170px;
-    border: 1px dashed #ccc;
+    border: 2px solid;
     border-radius: 4px;
     padding: 10px;
+}
+
+#wechatImg{
+    border-color: var(--green)
+}
+
+#alipayImg{
+    border-color: var(--blue)
 }
 
 /* 单个图片的容器 */
