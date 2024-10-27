@@ -48,29 +48,6 @@
   
   
   <entry>
-    <title>使用腾讯云cos存储作为图床</title>
-    <link href="/posts/7008b29f.html"/>
-    <url>/posts/7008b29f.html</url>
-    
-    <content type="html"><![CDATA[<ol><li>开通：腾讯云COS</li><li>下载：PicGo</li><li>PicGo配置腾讯云COS的密钥（<a href="https://console.cloud.tencent.com/cam/capi">密钥管理 - 常用工具 - 人脸核身 - 控制台 (tencent.com)</a>）</li><li>使用图床的时候要picgo是运行的否则上传不了</li><li>obsidian安装 image auto upload 插件即可（什么都不用改）</li><li>配置完成即可上传（都会出现上传弹框）：<ol><li>剪切板粘贴</li><li>图片拖拽到文章中</li></ol></li></ol><p>参考教程：<a href="https://www.bilibili.com/video/BV1pB4y1n7gM/?vd_source=6a8ff9295cd5c06e70b3b428d8fbd4c3">【Obsidian绝配！】为你的Ob搭建专属图床，保姆级教程！再也不用担心图片管理了！_哔哩哔哩_bilibili</a></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>obsidian</tag>
-      
-      <tag>图床</tag>
-      
-      <tag>数据云存储</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>博客搭建：开始</title>
     <link href="/posts/6b75d73b.html"/>
     <url>/posts/6b75d73b.html</url>
@@ -82,6 +59,29 @@
     <tags>
       
       <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用腾讯云cos存储作为图床</title>
+    <link href="/posts/7008b29f.html"/>
+    <url>/posts/7008b29f.html</url>
+    
+    <content type="html"><![CDATA[<ol><li>开通：腾讯云COS</li><li>下载：PicGo</li><li>PicGo配置腾讯云COS的密钥（<a href="https://console.cloud.tencent.com/cam/capi">密钥管理 - 常用工具 - 人脸核身 - 控制台 (tencent.com)</a>）</li><li>使用图床的时候要<code>picgo</code>是运行的否则上传不了</li><li><code>obsidian</code>安装 <code>image auto upload</code> 插件即可（什么都不用改）</li><li>配置完成即可上传（都会出现上传弹框）：<ol><li>剪切板粘贴</li><li>图片拖拽到文章中</li></ol></li></ol><p>参考教程：<a href="https://www.bilibili.com/video/BV1pB4y1n7gM/?vd_source=6a8ff9295cd5c06e70b3b428d8fbd4c3">【Obsidian绝配！】为你的Ob搭建专属图床，保姆级教程！再也不用担心图片管理了！_哔哩哔哩_bilibili</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>obsidian</tag>
+      
+      <tag>图床</tag>
+      
+      <tag>数据云存储</tag>
       
     </tags>
     
@@ -111,11 +111,11 @@
   
   
   <entry>
-    <title>WIN10：命令行修改壁纸，补充到自动切换任务中</title>
-    <link href="/posts/6ba6ac33.html"/>
-    <url>/posts/6ba6ac33.html</url>
+    <title>WIN10：自动切换明暗主题</title>
+    <link href="/posts/2b70e3a.html"/>
+    <url>/posts/2b70e3a.html</url>
     
-    <content type="html"><![CDATA[<ol><li><code>cmd</code>输入<code>regedit</code>进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cmd输入 RunDll32<span class="hljs-selector-class">.exe</span> USER32<span class="hljs-selector-class">.DLL</span>,UpdatePerUserSystemParameters<br></code></pre></td></tr></table></figure></li><li>用命令行修改图片的方法<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">reg <span class="hljs-keyword">add</span><span class="language-bash"> <span class="hljs-string">&quot;hkcu\control panel\desktop&quot;</span> /v wallpaper /d <span class="hljs-string">&quot;新壁纸地址(绝对地址）&quot;</span> /f</span><br></code></pre></td></tr></table></figure></li><li>壁纸缓存所在位置 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">如果壁纸设置成功<br><span class="hljs-name">C</span>:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles<br>在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录<br>这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<br></code></pre></td></tr></table></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="【新】使用软件切换"><a href="#【新】使用软件切换" class="headerlink" title="【新】使用软件切换"></a>【新】使用软件切换</h1><p>使用开源软件 <a href="https://github.com/AutoDarkMode/Windows-Auto-Night-Mode">Auto Dark Mode</a> 自动切换主题<br>    <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410231204813.png" alt="image.png|600"></p><h1 id="【旧】任务栏切换"><a href="#【旧】任务栏切换" class="headerlink" title="【旧】任务栏切换"></a>【旧】任务栏切换</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell">reg.exe<br>应用深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 0 /f<br>应用浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 1 /f<br><br>开始菜单等深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 0 /f<br>开始菜单等浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 1 /f<br></code></pre></td></tr></table></figure><ol><li>打开任务计划程序<ol><li>我的电脑右键管理打开</li><li>或用utools输入”任务计划程序”打开</li></ol></li><li>创建基本任务<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344222.png" alt="Pasted image 20221028221214|600"></li></ol></li><li>输入启动的程序和参数<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344223.png" alt="Pasted image 20221028221416|600"></li></ol></li><li>设置计划过了时间也启动<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344224.png" alt="Pasted image 20221028221505|600"></li></ol></li><li>睡眠模式启动后也会执行，只不过会延迟一会（shutdown -h是休眠模式）</li><li>隐藏任务执行时出现的cmd窗口<ol><li>选择<code>不管用户是否登录都要运行</code> 即可 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344220.png" alt="|600"></li></ol></li></ol>]]></content>
     
     
     
@@ -130,11 +130,11 @@
   
   
   <entry>
-    <title>WIN10：自动切换明暗主题</title>
-    <link href="/posts/2b70e3a.html"/>
-    <url>/posts/2b70e3a.html</url>
+    <title>WIN10：命令行修改壁纸，补充到自动切换任务中</title>
+    <link href="/posts/6ba6ac33.html"/>
+    <url>/posts/6ba6ac33.html</url>
     
-    <content type="html"><![CDATA[<h1 id="【新】使用软件切换"><a href="#【新】使用软件切换" class="headerlink" title="【新】使用软件切换"></a>【新】使用软件切换</h1><p>使用开源软件 <a href="https://github.com/AutoDarkMode/Windows-Auto-Night-Mode">Auto Dark Mode</a> 自动切换主题<br>    <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410231204813.png" alt="image.png|600"></p><h1 id="【旧】任务栏切换"><a href="#【旧】任务栏切换" class="headerlink" title="【旧】任务栏切换"></a>【旧】任务栏切换</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell">reg.exe<br>应用深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 0 /f<br>应用浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 1 /f<br><br>开始菜单等深色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 0 /f<br>开始菜单等浅色模式<br>add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 1 /f<br></code></pre></td></tr></table></figure><ol><li>打开任务计划程序<ol><li>我的电脑右键管理打开</li><li>或用utools输入”任务计划程序”打开</li></ol></li><li>创建基本任务<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344222.png" alt="Pasted image 20221028221214|600"></li></ol></li><li>输入启动的程序和参数<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344223.png" alt="Pasted image 20221028221416|600"></li></ol></li><li>设置计划过了时间也启动<ol><li><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344224.png" alt="Pasted image 20221028221505|600"></li></ol></li><li>睡眠模式启动后也会执行，只不过会延迟一会（shutdown -h是休眠模式）</li><li>隐藏任务执行时出现的cmd窗口<ol><li>选择<code>不管用户是否登录都要运行</code> 即可 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344220.png" alt="|600"></li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<ol><li><code>cmd</code>输入<code>regedit</code>进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cmd输入 RunDll32<span class="hljs-selector-class">.exe</span> USER32<span class="hljs-selector-class">.DLL</span>,UpdatePerUserSystemParameters<br></code></pre></td></tr></table></figure></li><li>用命令行修改图片的方法<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">reg <span class="hljs-keyword">add</span><span class="language-bash"> <span class="hljs-string">&quot;hkcu\control panel\desktop&quot;</span> /v wallpaper /d <span class="hljs-string">&quot;新壁纸地址(绝对地址）&quot;</span> /f</span><br></code></pre></td></tr></table></figure></li><li>壁纸缓存所在位置 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">如果壁纸设置成功<br><span class="hljs-name">C</span>:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles<br>在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录<br>这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<br></code></pre></td></tr></table></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
     
     
     
