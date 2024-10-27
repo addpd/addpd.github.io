@@ -90,27 +90,6 @@
   
   
   <entry>
-    <title>vscode &amp; obsidian 使用FiraCode字体并设置组合符号</title>
-    <link href="/posts/276bc365.html"/>
-    <url>/posts/276bc365.html</url>
-    
-    <content type="html"><![CDATA[<p>下载FiraCode字体并安装,并在 vscode 和 obsidian 中配置</p><h1 id="一、FiraCode字体下载与安装"><a href="#一、FiraCode字体下载与安装" class="headerlink" title="一、FiraCode字体下载与安装"></a>一、FiraCode字体下载与安装</h1><ol><li>下载 FiraCode 字体<ul><li>下载地址：<a href="https://github.com/tonsky/FiraCode/blob/master/README_CN.md#%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85">https://github.com/tonsky/FiraCode/blob/master/README_CN.md#下载和安装</a></li></ul></li><li>安装<br> <code>Fira_Code_v6.2</code> 解压后有多个字体文件夹，如果没有其他需要就进入 <code>ttf</code> 文件夹中 全选 -&gt; 右键 -&gt; 安装<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403096.png" alt="|450|600|600"><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403097.png" alt="|450|600|600"></li></ol><h1 id="二、在软件中配置FiraCode字体"><a href="#二、在软件中配置FiraCode字体" class="headerlink" title="二、在软件中配置FiraCode字体"></a>二、在软件中配置FiraCode字体</h1><h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403098.png" alt="|525|600|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403099.png" alt="|525|600|600"><br><code>editor.fontfamily</code> 配置字体，优先字体放在前面<br><code>editor.fontLigatures</code> 配置组合符号是否开启，还可根据自己需要设置变体：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><h2 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h2><ol><li><p>字体配置<br> 设置 -&gt; 外观 -&gt; 字体<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403100.png" alt="|525|600|600"></p></li><li><p>字符变体配置<br> 设置 -&gt; 外观 -&gt; css代码片段</p><p> 新增css文件（名字自定义）：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403101.png" alt="|500|600|600"></p><p> 输入：<code>body&#123; font-feature-settings: &quot;ss02&quot;, &quot;ss08&quot;; &#125;</code><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403102.png" alt="|500|600|600"><br> 注：vscode配置和css配置不同，请注意<strong>引号</strong>，详情见：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets#vs-code">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><p> 然后开启：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403103.png" alt="|500|600|600"></p></li></ol><h1 id="三、补充信息"><a href="#三、补充信息" class="headerlink" title="三、补充信息"></a>三、补充信息</h1><ul><li><a href="https://github.com/tonsky/FiraCode/discussions/1275">variable_ttf和ttf有什么区别？</a></li></ul>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-      <tag>字体</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>WIN10：命令行修改壁纸，补充到自动切换任务中</title>
     <link href="/posts/6ba6ac33.html"/>
     <url>/posts/6ba6ac33.html</url>
@@ -141,6 +120,27 @@
     <tags>
       
       <tag>win10</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode &amp; obsidian 使用FiraCode字体并设置组合符号</title>
+    <link href="/posts/276bc365.html"/>
+    <url>/posts/276bc365.html</url>
+    
+    <content type="html"><![CDATA[<p>下载FiraCode字体并安装,并在 vscode 和 obsidian 中配置</p><h1 id="一、FiraCode字体下载与安装"><a href="#一、FiraCode字体下载与安装" class="headerlink" title="一、FiraCode字体下载与安装"></a>一、FiraCode字体下载与安装</h1><ol><li>下载 FiraCode 字体<ul><li>下载地址：<a href="https://github.com/tonsky/FiraCode/blob/master/README_CN.md#%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85">https://github.com/tonsky/FiraCode/blob/master/README_CN.md#下载和安装</a></li></ul></li><li>安装<br> <code>Fira_Code_v6.2</code> 解压后有多个字体文件夹，如果没有其他需要就进入 <code>ttf</code> 文件夹中 全选 -&gt; 右键 -&gt; 安装<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403096.png" alt="|450|600|600"><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403097.png" alt="|450|600|600"></li></ol><h1 id="二、在软件中配置FiraCode字体"><a href="#二、在软件中配置FiraCode字体" class="headerlink" title="二、在软件中配置FiraCode字体"></a>二、在软件中配置FiraCode字体</h1><h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403098.png" alt="|525|600|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403099.png" alt="|525|600|600"><br><code>editor.fontfamily</code> 配置字体，优先字体放在前面<br><code>editor.fontLigatures</code> 配置组合符号是否开启，还可根据自己需要设置变体：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><h2 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h2><ol><li><p>字体配置<br> 设置 -&gt; 外观 -&gt; 字体<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403100.png" alt="|525|600|600"></p></li><li><p>字符变体配置<br> 设置 -&gt; 外观 -&gt; css代码片段</p><p> 新增css文件（名字自定义）：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403101.png" alt="|500|600|600"></p><p> 输入：<code>body&#123; font-feature-settings: &quot;ss02&quot;, &quot;ss08&quot;; &#125;</code><br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403102.png" alt="|500|600|600"><br> 注：vscode配置和css配置不同，请注意<strong>引号</strong>，详情见：<a href="https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets#vs-code">How to enable stylistic sets · tonsky&#x2F;FiraCode Wiki (github.com)</a></p><p> 然后开启：<br> <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403103.png" alt="|500|600|600"></p></li></ol><h1 id="三、补充信息"><a href="#三、补充信息" class="headerlink" title="三、补充信息"></a>三、补充信息</h1><ul><li><a href="https://github.com/tonsky/FiraCode/discussions/1275">variable_ttf和ttf有什么区别？</a></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
+      
+      <tag>字体</tag>
       
     </tags>
     
