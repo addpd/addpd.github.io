@@ -51,15 +51,15 @@ Fluid.events = {
       if (pxv > max) {
         pxv = max;
       }
-      ph.css({
-        transform: 'translate3d(0,' + pxv + 'px,0)'
-      });
-      var sideCol = jQuery('.side-col');
-      if (sideCol) {
-        sideCol.css({
-          'padding-top': pxv + 'px'
+      requestAnimationFrame(function () {
+        ph.css({
+          transform: 'translate3d(0,' + pxv + 'px,0)',
         });
-      }
+
+        jQuery('.side-col')?.css({
+          'padding-top': pxv + 'px',
+        });
+      });
     };
     Fluid.utils.listenScroll(parallax);
   },
