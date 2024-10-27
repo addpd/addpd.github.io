@@ -111,10 +111,10 @@ fun_features:
     placement: left
 
     # Options: hover | always
-    visible: hover
+    visible: always
 
     # Options: § | # | ❡
-    icon: ""
+    icon: "❡"
 
   # 加载进度条
   # Progress bar when loading
@@ -234,10 +234,12 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
+  - /js/reward.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
+  - /css/reward.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -1132,3 +1134,12 @@ static_prefix:
   hint: https://lib.baomitu.com/hint.css/2.7.0/
 
   moment: https://lib.baomitu.com/moment.js/2.29.4/
+
+# Donate 自己为 Fluid 主题增加的打赏功能
+# `message` 是打赏提示语，可自定义
+# `alipay` 是支付宝付款码， `wechatpay` 是微信付款码。
+donate:
+  enable: true
+  message: 觉得不错的话，给点打赏吧 ୧(๑•̀⌄•́๑)૭ 
+  alipay: /img/收款码/收款码_支付宝_mini.png
+  wechatpay: /img/收款码/赞赏码_微信_mini.png
