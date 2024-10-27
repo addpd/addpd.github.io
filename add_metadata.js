@@ -1,3 +1,6 @@
+/*
+ 在部署前对文章做一些处理，不只是元数据
+ */
 const fs = require('fs').promises;
 const path = require('path');
 const yaml = require('js-yaml');
@@ -113,6 +116,12 @@ async function addMetadataToFile(filePath) {
       }
       if (!metadata.categories) {
         metadata.categories = [];
+        updatedMetadata = true;
+      }
+
+      // 如果abbrlink有值并且为0的时候改为没有这个值，然后会在hexo g的时候生成abbrlink
+      if (metadata.abbrlink && metadata.abbrlink == 0) {
+        metadata.abbrlink = undefined;
         updatedMetadata = true;
       }
 

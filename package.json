@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
+    "pro-build": "node add_metadata.js && hexo clean && hexo generate --config _config.yml,_config.ignore.pro.yml",
     "clean": "hexo clean",
     "deploy": "node add_metadata.js && hexo clean && hexo generate --config _config.yml,_config.ignore.pro.yml && hexo deploy",
     "server": "hexo clean && hexo server",
@@ -31,7 +32,6 @@
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-anzhiyu": "^1.6.14",
     "hexo-uglify": "^2.0.0",
     "pwa-asset-generator": "^6.3.2"
   }

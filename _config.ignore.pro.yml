@@ -1,2 +1,3 @@
 ignore:
   - "**/sample"
+  - "**/template通用模板"

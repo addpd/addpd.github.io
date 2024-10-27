@@ -56,9 +56,6 @@ importers:
       hexo-server:
         specifier: ^3.0.0
         version: 3.0.0
-      hexo-theme-anzhiyu:
-        specifier: ^1.6.14
-        version: 1.6.14
       hexo-uglify:
         specifier: ^2.0.0
         version: 2.0.0
@@ -1509,9 +1506,6 @@ packages:
   hexo-server@3.0.0:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
-
-  hexo-theme-anzhiyu@1.6.14:
-    resolution: {integrity: sha512-Ltbsaf1URcFfZuqMVeDvRM1XUjC/PYbXtgbv9V9FVjfv85sotELCEjX+PbkangyGFvlO0oWNJeEjNS9/UUF13w==}
 
   hexo-uglify@2.0.0:
     resolution: {integrity: sha512-pxKBWhe+WUkITVcFUKY8o3A16Zh8t9XRgmvuZD54HFOwApCxlJmWNSh7kMT1nsrElozpSzMPpFgsRG7yz7j92Q==}
@@ -4586,13 +4580,6 @@ snapshots:
       open: 8.4.2
       picocolors: 1.1.0
       serve-static: 1.16.2
-    transitivePeerDependencies:
-      - supports-color
-
-  hexo-theme-anzhiyu@1.6.14:
-    dependencies:
-      hexo-renderer-pug: 3.0.0
-      hexo-renderer-stylus: 3.0.1
     transitivePeerDependencies:
       - supports-color
 
