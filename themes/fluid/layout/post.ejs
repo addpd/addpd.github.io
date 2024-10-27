@@ -62,11 +62,11 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
                 <p class="tea">“<%= theme.donate.message %>”</p>
                 <div id="rewardImgContainer" class="reward-img-container">
                       <div class="singleImgContainer">
-                          <img id="wechatImg" class="reward-img" src="<%= theme.donate.wechatpay %>" alt="微信二维码">
+                          <img id="wechatImg" class="reward-img" src="<%= theme.donate.wechatpay %>" onclick="window.open('<%= theme.donate.wechatpay %>')" alt="微信二维码">
                             <p class="wechatPay">微信</p>
                         </div>
                         <div class="singleImgContainer">
-                            <img id="alipayImg" class="reward-img" src="<%= theme.donate.alipay %>" alt="支付宝二维码">
+                            <img id="alipayImg" class="reward-img" src="<%= theme.donate.alipay %>" onclick="window.open('<%= theme.donate.alipay %>')" alt="支付宝二维码">
                             <p class="aliPay">支付宝</p>
                         </div>
                 </div>
