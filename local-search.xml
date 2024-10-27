@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>【hexo】添加评论插件gitalk</title>
+    <title>博客搭建：添加评论插件</title>
     <link href="/posts/8889ee03.html"/>
     <url>/posts/8889ee03.html</url>
     
-    <content type="html"><![CDATA[<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>gitalk中文文档说明：<br><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk — gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk (github.com)</a></p><p>步骤：<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055619.png" alt="image.png|600"><br>点进去配置出现ID和密钥</p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055976.png" alt="image.png|600"><br>配置到这里<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242110349.png" alt="完整配置|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242107596.png" alt="错误信息|600"><br>回调地址错误，本地测试出现这个是因为本地地址是 <a href="http://localhost:4000/">http://localhost:4000/</a> ，回调地址写的是 <a href="https://addpd.github.io/">https://addpd.github.io/</a></p><p>使用 <a href="https://addpd.github.io/">https://addpd.github.io/</a> 就好了<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242157687.png" alt="对接gitalk成功|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242159382.png" alt="评论存储在issue里|600"></p><h1 id="每个页面需要手动创建的问题"><a href="#每个页面需要手动创建的问题" class="headerlink" title="每个页面需要手动创建的问题"></a>每个页面需要手动创建的问题</h1><p><code>createIssueManually</code>改为<code>false</code>即可</p><h1 id="回调问题"><a href="#回调问题" class="headerlink" title="回调问题"></a>回调问题</h1><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654344.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654547.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655978.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655243.png" alt="image.png|600"></p><h2 id="1、空格替换"><a href="#1、空格替换" class="headerlink" title="1、空格替换"></a>1、空格替换</h2><p>我这里测试的是因为文章标题有空格的会出现回调问题，将空格替换为 <code>_</code> 或 <code>-</code> 就好了，其他的方案仅供参考</p><h2 id="2、使用abbr生成文章绝对链接"><a href="#2、使用abbr生成文章绝对链接" class="headerlink" title="2、使用abbr生成文章绝对链接"></a>2、使用abbr生成文章绝对链接</h2><p>也有不用改标题的方法：使用abbr生成绝对链接，这样url就不会带有空格的标题了<br>1、安装：<code>npm install hexo-abbrlink --save</code><br>2、在 Hexo 配置文件 <code>_config.yml</code> 中启用：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">permalink:</span> <span class="hljs-string">posts/:abbrlink.html</span><br><span class="hljs-attr">abbrlink:</span><br>  <span class="hljs-attr">alg:</span> <span class="hljs-string">crc32</span>  <span class="hljs-comment"># 生成链接的算法，可以是 crc32 或 md5</span><br>  <span class="hljs-attr">rep:</span> <span class="hljs-string">hex</span>    <span class="hljs-comment"># 输出格式，可以是 hex 或 dec</span><br></code></pre></td></tr></table></figure><p>3、生成静态页面时，插件会为每篇文章生成缩写链接。<br>    例如，一篇标题为“Hexo 教程”的文章，如果启用了 <code>abbrlink</code> 插件，可能会生成一个类似于 <code>http://your-site.com/posts/abcd1234.html</code> 这样的短链接。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Gitalk"><a href="#Gitalk" class="headerlink" title="Gitalk"></a>Gitalk</h1><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>gitalk中文文档说明：<br><a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk — gitalk&#x2F;readme-cn.md at master · gitalk&#x2F;gitalk (github.com)</a></p><p>步骤：<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055619.png" alt="image.png|600"><br>点进去配置出现ID和密钥</p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055976.png" alt="image.png|600"><br>配置到这里<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242110349.png" alt="完整配置|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242107596.png" alt="错误信息|600"><br>回调地址错误，本地测试出现这个是因为本地地址是 <a href="http://localhost:4000/">http://localhost:4000/</a> ，回调地址写的是 <a href="https://addpd.github.io/">https://addpd.github.io/</a></p><p>使用 <a href="https://addpd.github.io/">https://addpd.github.io/</a> 就好了<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242157687.png" alt="对接gitalk成功|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242159382.png" alt="评论存储在issue里|600"></p><h2 id="每个页面需要手动创建的问题"><a href="#每个页面需要手动创建的问题" class="headerlink" title="每个页面需要手动创建的问题"></a>每个页面需要手动创建的问题</h2><p><code>createIssueManually</code>改为<code>false</code>即可</p><h2 id="回调问题"><a href="#回调问题" class="headerlink" title="回调问题"></a>回调问题</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654344.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654547.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655978.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655243.png" alt="image.png|600"></p><h3 id="1、空格替换"><a href="#1、空格替换" class="headerlink" title="1、空格替换"></a>1、空格替换</h3><p>我这里测试的是因为文章标题有空格的会出现回调问题，将空格替换为 <code>_</code> 或 <code>-</code> 就好了，其他的方案仅供参考</p><h3 id="2、使用abbr生成文章绝对链接"><a href="#2、使用abbr生成文章绝对链接" class="headerlink" title="2、使用abbr生成文章绝对链接"></a>2、使用abbr生成文章绝对链接</h3><p>也有不用改标题的方法：使用abbr生成绝对链接，这样url就不会带有空格的标题了<br>1、安装：<code>npm install hexo-abbrlink --save</code><br>2、在 Hexo 配置文件 <code>_config.yml</code> 中启用：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">permalink:</span> <span class="hljs-string">posts/:abbrlink.html</span><br><span class="hljs-attr">abbrlink:</span><br>  <span class="hljs-attr">alg:</span> <span class="hljs-string">crc32</span>  <span class="hljs-comment"># 生成链接的算法，可以是 crc32 或 md5</span><br>  <span class="hljs-attr">rep:</span> <span class="hljs-string">hex</span>    <span class="hljs-comment"># 输出格式，可以是 hex 或 dec</span><br></code></pre></td></tr></table></figure><p>3、生成静态页面时，插件会为每篇文章生成缩写链接。<br>    例如，一篇标题为“Hexo 教程”的文章，如果启用了 <code>abbrlink</code> 插件，可能会生成一个类似于 <code>http://your-site.com/posts/abcd1234.html</code> 这样的短链接。</p>]]></content>
     
     
     
@@ -86,25 +86,6 @@
   
   
   <entry>
-    <title>使用calibre转移kindle书籍</title>
-    <link href="/posts/98dd3f.html"/>
-    <url>/posts/98dd3f.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>将kindle中书籍导出</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>calibre:<a href="https://calibre-ebook.com/download">calibre - Download calibre (calibre-ebook.com)</a><br>dedrm插件:<a href="https://github.com/apprenticeharper/DeDRM_tools/releases">Releases · apprenticeharper&#x2F;DeDRM_tools (github.com)</a><br>kindle客户端</p><h1 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h1><h2 id="kindle"><a href="#kindle" class="headerlink" title="kindle"></a>kindle</h2><p>在kindle客户端上把全部书籍下载到本地</p><h2 id="calibre："><a href="#calibre：" class="headerlink" title="calibre："></a>calibre：</h2><p>1、添加插件：首选项-插件-从文件加载插件-选择解压出来的DeDRM_plugin.zip-重启calibre<br>2、配置插件：搜索dedrm-自定义插件-elnk Kindle ebooks-输入kindle设备序列号（亚马逊官网：设置-&gt;全部设置-&gt;设备选项-&gt;设备信息-序列号)</p><h3 id="导入书籍："><a href="#导入书籍：" class="headerlink" title="导入书籍："></a>导入书籍：</h3><p>calibre-添加书籍-从文件和子文件夹中添加-<code>C:\Users\&lt;账户名&gt;\Documents\My Kindle Content</code>-导入后ctrl+a全选右键批量转换-转换完成后再全选右键保存为epub即可</p><h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://zhuanlan.zhihu.com/p/54391402">手把手教你导出kindle里的电子书并转成pdf&#x2F;mobi - 知乎 (zhihu.com)</a><br><a href="https://gulu-dev.com/post/2022-06-04-save-kindle-ebooks-into-calibre/">2022.06 在 Kindle 中国停运前导出所有 Kindle 电子书 (gulu-dev.com)</a></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>kindle</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>【hexo】建立个人blog</title>
     <link href="/posts/6b75d73b.html"/>
     <url>/posts/6b75d73b.html</url>
@@ -170,25 +151,6 @@
   
   
   <entry>
-    <title>vscode 修改状态栏底部和字体的颜色</title>
-    <link href="/posts/64bf1957.html"/>
-    <url>/posts/64bf1957.html</url>
-    
-    <content type="html"><![CDATA[<p>点击齿轮进入<code>setting</code><br>搜索<code>workbench.colorCustomizations</code>，然后点击编辑<code>setting.json</code></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;workbench.colorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-comment">//状态栏背景颜色</span><br>    <span class="hljs-attr">&quot;statusBar.background&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.noFolderBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.debuggingBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.foreground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#DBDBDB&quot;</span> <span class="hljs-comment">//底部栏字体颜色</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><p>字体颜色属性：<code>&quot;statusBar.foreground&quot;</code><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403513.png" alt="|600"></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>vscode &amp; obsidian 设置组合符号</title>
     <link href="/posts/276bc365.html"/>
     <url>/posts/276bc365.html</url>
@@ -210,11 +172,11 @@
   
   
   <entry>
-    <title>vscode 工作区配置插件 配置不同工作环境</title>
-    <link href="/posts/9f4c44d8.html"/>
-    <url>/posts/9f4c44d8.html</url>
+    <title>vscode 自定义代码注释颜色</title>
+    <link href="/posts/e30df4c0.html"/>
+    <url>/posts/e30df4c0.html</url>
     
-    <content type="html"><![CDATA[<p>背景：<br>公司中老项目都是用的vue2，新项目用的vue3，在vscode中，vue2用的插件是Vetur，vue3用的插件是Vue Language Features (Volar)，这就导致打开vue2的时候需要禁用Volar，打开vue3的时候需要禁用Vetur。而vscode提供了工作区的概念，可以给每个工作区配置不用的插件，形成不同的工作环境。</p><p>使用：</p><ol><li><p>打开文件夹</p></li><li><p>左上角【文件】-【将工作区另存为】-选择合适位置-【保存】</p></li><li><p>左上角【文件】-【首选项】-【设置】可以看到工作区是否创建成功</p></li><li><p>找到想要配置的插件，禁用&#x2F;启用到对应工作区即可</p></li></ol><p>建好工作区后，以后同配置的文件夹，可以直接拖到对应的工作区，即可享受相同的配置。</p>]]></content>
+    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     
@@ -269,38 +231,6 @@
   
   
   <entry>
-    <title>dependencies和devDependencies的区别</title>
-    <link href="/posts/f3da8d84.html"/>
-    <url>/posts/f3da8d84.html</url>
-    
-    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281359532.png" alt="Pasted image 20221203212125|600"></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>vscode 自定义代码注释颜色</title>
-    <link href="/posts/e30df4c0.html"/>
-    <url>/posts/e30df4c0.html</url>
-    
-    <content type="html"><![CDATA[<p>ctrl + shift +p 输入 setting 打开json文件<br>在setting.json中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;editor.tokenColorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;comments&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#81848E&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vscode</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>命令行修改壁纸，补充到自动切换任务中</title>
     <link href="/posts/6ba6ac33.html"/>
     <url>/posts/6ba6ac33.html</url>
@@ -331,6 +261,25 @@
     <tags>
       
       <tag>win10</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vscode 修改状态栏底部和字体的颜色</title>
+    <link href="/posts/64bf1957.html"/>
+    <url>/posts/64bf1957.html</url>
+    
+    <content type="html"><![CDATA[<p>点击齿轮进入<code>setting</code><br>搜索<code>workbench.colorCustomizations</code>，然后点击编辑<code>setting.json</code></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;workbench.colorCustomizations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-comment">//状态栏背景颜色</span><br>    <span class="hljs-attr">&quot;statusBar.background&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.noFolderBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.debuggingBackground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#4D51E7&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;statusBar.foreground&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;#DBDBDB&quot;</span> <span class="hljs-comment">//底部栏字体颜色</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><p>字体颜色属性：<code>&quot;statusBar.foreground&quot;</code><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281403513.png" alt="|600"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vscode</tag>
       
     </tags>
     
