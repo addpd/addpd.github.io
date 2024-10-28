@@ -94,14 +94,6 @@ async function addMetadataToFile(filePath) {
         metadata.published = false;
         updatedMetadata = true;
       }
-      if (!metadata.top_img) {
-        metadata.top_img = '';
-        updatedMetadata = true;
-      }
-      if (!metadata.cover_img) {
-        metadata.cover_img = '';
-        updatedMetadata = true;
-      }
       if (!metadata.index_img) {
         metadata.index_img = '';
         updatedMetadata = true;
@@ -116,6 +108,14 @@ async function addMetadataToFile(filePath) {
       }
       if (!metadata.categories) {
         metadata.categories = [];
+        updatedMetadata = true;
+      }
+      if (metadata.top_img !== undefined) {
+        delete metadata.top_img;
+        updatedMetadata = true;
+      }
+      if (metadata.cover_img !== undefined) {
+        delete metadata.cover_img;
         updatedMetadata = true;
       }
 
@@ -148,8 +148,6 @@ async function addMetadataToFile(filePath) {
           title: fileName,
           date: formattedDate,
           published: false,
-          top_img: '',
-          cover_img: '',
           index_img: '',
           banner_img: '',
           tags: [],
