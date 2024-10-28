@@ -262,7 +262,7 @@ web_analytics:
   # Google Analytics 4 MEASUREMENT_ID
   # See: https://support.google.com/analytics/answer/9744165#zippy=%2Cin-this-article
   google:
-    measurement_id: # G-GEFHFY35Z0
+    measurement_id: G-GEFHFY35Z0
 
   # 腾讯统计的 H5 App ID，开启高级功能才有cid
   # Tencent analytics, set APP ID
@@ -380,10 +380,10 @@ navbar:
           icon: 'fa fa-globe',
           submenu: [
             { key: 'Umami', link: 'https://eu.umami.is/websites/a1f37736-64bf-45a4-b709-429c35295a51', target: '_blank'},
+            { key: 'Google Analytics', link: 'https://analytics.google.com/analytics/web/?hl=zh-cn#/a266525416p438862908/admin/streams/table/', target: '_blank'},
           ]
       }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    #- { key: "links", link: "/links/", icon: "fa icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files

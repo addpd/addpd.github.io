@@ -22,9 +22,15 @@
 }
 
 .reward-img-container {
-    display: none;
+    display: inline-flex;
     margin-top: 20px;
     gap: 1em;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.reward-img-container.active{
+    max-height: 220px;
 }
 
 .reward-img {
@@ -35,11 +41,11 @@
     cursor: pointer;
 }
 
-#wechatImg{
+#wechatImg {
     border-color: var(--green)
 }
 
-#alipayImg{
+#alipayImg {
     border-color: var(--blue)
 }
 
