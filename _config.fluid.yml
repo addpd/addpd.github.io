@@ -227,7 +227,7 @@ color:
 # Font
 font:
   font_size: 16px
-  font_family:
+  font_family: 'LXGW WenKai GB Screen'
   letter_spacing: 0.02em
   code_font_size: 85%
 
@@ -240,6 +240,8 @@ custom_js:
 # The usage is the same as custom_js
 custom_css:
   - /css/reward.css
+  - /css/custom.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -294,11 +296,11 @@ web_analytics:
 
     # umami 的 website id，需要在 umami 后台创建站点后获取
     # umami website id, get after create website in umami
-    website_id: ad42c0d3-97c3-4f44-be89-418431ff2a0e
+    website_id: a1f37736-64bf-45a4-b709-429c35295a51
 
     # 如果你只想统计特定的域名可以填入此字段，多个域名通过逗号分隔，这可以避免统计 localhost。
     # If you only want to tracker to specific domains you can fill in this field, multiple domain names are separated by commas, which can avoid tracker localhost
-    domains: addpd.github.io
+    domains: weihao.life
 
     # 用于统计 PV UV 的开始时间，格式为 "YYYY-MM-DD"
     # statistics on the start time, the format is "YYYY-MM-DD"
@@ -373,8 +375,15 @@ navbar:
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+    - {
+          key: 'site',
+          icon: 'fa fa-globe',
+          submenu: [
+            { key: 'Umami', link: 'https://eu.umami.is/websites/a1f37736-64bf-45a4-b709-429c35295a51', target: '_blank'},
+          ]
+      }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    #- { key: "links", link: "/links/", icon: "fa icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files

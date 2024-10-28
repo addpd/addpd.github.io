@@ -3,14 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
-    "pro-build": "node add_metadata.js && hexo clean && hexo generate --config _config.yml,_config.ignore.pro.yml",
-    "clean": "hexo clean",
-    "deploy": "node add_metadata.js && hexo clean && hexo generate --config _config.yml,_config.ignore.pro.yml && hexo deploy",
-    "server": "hexo clean && hexo server",
-    "dev": "hexo clean && hexo server --config _config.yml,_config.ignore.yml",
+    "dev": "hexo clean && pnpm dev-server",
     "dev-build": "hexo generate --config _config.yml,_config.ignore.yml",
-    "dev-server": "hexo server --config _config.yml,_config.ignore.yml"
+    "dev-server": "hexo server --config _config.yml,_config.ignore.yml",
+    "prod-build": "node add_metadata.js && hexo clean && hexo generate --config _config.yml,_config.ignore.pro.yml",
+    "deploy": "pnpm prod-build && hexo deploy"
   },
   "hexo": {
     "version": "7.3.0"
