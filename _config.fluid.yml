@@ -63,7 +63,7 @@ code:
       # 在链接中挑选 style 填入
       # Select a style in the link
       # See: https://highlightjs.org/demo/
-      style: "github gist"
+      style: "github"
       style_dark: "dark"
 
     prismjs:
@@ -242,6 +242,8 @@ custom_css:
   - /css/reward.css
   - /css/custom.css
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+
+custom_head: '<link rel="preload" href="/fonts/LXGWWenKaiGBScreen.woff2" as="font" type="font/woff2" crossorigin="anonymous">'
 
 # 网页访问统计
 # Analysis of website visitors

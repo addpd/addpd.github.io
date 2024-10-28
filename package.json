@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "cli-progress": "^3.12.0",
+    "gulp": "^5.0.0",
     "hexo": "^7.3.0",
     "hexo-abbrlink": "^2.2.1",
     "hexo-clean-css": "^2.0.0",

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'LXGW WenKai GB Screen';
-    src: url('/fonts/LXGWWenKaiGBScreen.ttf') format('truetype');
+    src: url('/fonts/LXGWWenKaiGBScreen.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
