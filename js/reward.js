@@ -1,1 +1,1 @@
-const rewardBtn=document.getElementById("rewardBtn"),rewardImgContainer=document.getElementById("rewardImgContainer");rewardBtn&&(rewardBtn.onclick=()=>{rewardImgContainer.classList.toggle("active")});
+let rewardBtn=document.getElementById("rewardBtn"),rewardImgContainer=document.getElementById("rewardImgContainer");rewardBtn&&(rewardBtn.onclick=()=>{rewardImgContainer.classList.toggle("active")});
