@@ -1,1 +1,1 @@
-let rewardBtn=document.getElementById("rewardBtn"),rewardImgContainer=document.getElementById("rewardImgContainer");rewardBtn&&(rewardBtn.onclick=()=>{rewardImgContainer.classList.toggle("active")});
+var rewardBtn=document.getElementById("rewardBtn"),rewardImgContainer=document.getElementById("rewardImgContainer");rewardBtn&&(rewardBtn.onclick=function(){rewardImgContainer.classList.toggle("active")});
