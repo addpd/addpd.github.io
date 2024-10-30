@@ -234,15 +234,14 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
-  - /js/reward.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
-  - /css/reward.css
   - /css/custom.css
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 
+# 只有一行
 custom_head: '<link rel="preload" href="/fonts/LXGWWenKaiGBScreen.woff2" as="font" type="font/woff2" crossorigin="anonymous">'
 
 # 网页访问统计
@@ -383,6 +382,7 @@ navbar:
           submenu: [
             { key: 'Umami', link: 'https://eu.umami.is/websites/a1f37736-64bf-45a4-b709-429c35295a51', target: '_blank'},
             { key: 'Google Analytics', link: 'https://analytics.google.com/analytics/web/?hl=zh-cn#/a266525416p438862908/admin/streams/table/', target: '_blank'},
+            { key: 'Cloudflare', link: 'https://dash.cloudflare.com/1eed0738e1e1bea17c6a686b2a0b783f/weihao.life', target: '_blank'},
           ]
       }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
@@ -1109,7 +1109,7 @@ static_prefix:
 
   jquery: https://lib.baomitu.com/jquery/3.6.4/
 
-  bootstrap: https://lib.baomitu.com/twitter-bootstrap/4.6.1/
+  bootstrap: /baomitu/twitter-bootstrap@4.6.1/
 
   prismjs: https://lib.baomitu.com/prism/1.29.0/
 
