@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "hexo clean && pnpm dev-server",
+    "dev": "pnpm dev-server",
     "dev-build": "hexo generate --config _config.yml,_config.ignore.yml",
     "dev-server": "hexo server --config _config.yml,_config.ignore.yml",
     "prod-build": "node add_metadata.js && hexo clean && hexo generate --config _config.yml,_config.ignore.pro.yml",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "cli-progress": "^3.12.0",
+    "del": "^8.0.0",
     "gulp": "^5.0.0",
     "hexo": "^7.3.0",
     "hexo-abbrlink": "^2.2.1",
@@ -32,5 +33,8 @@
     "hexo-server": "^3.0.0",
     "hexo-uglify": "^2.0.0",
     "pwa-asset-generator": "^6.3.2"
+  },
+  "devDependencies": {
+    "gulp-purgecss": "^6.0.0"
   }
 }
