@@ -7,7 +7,7 @@
     "dev-build": "hexo generate --config _config.yml,_config.ignore.yml",
     "dev-server": "hexo server --config _config.yml,_config.ignore.yml",
     "prod-build": "node add_metadata.js && hexo clean && hexo generate --config _config.yml,_config.ignore.pro.yml",
-    "deploy": "pnpm prod-build && hexo deploy"
+    "deploy": "pnpm prod-build && gulp && hexo deploy"
   },
   "hexo": {
     "version": "7.3.0"
