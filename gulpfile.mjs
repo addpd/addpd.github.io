@@ -21,6 +21,7 @@ gulp.task('purgecss', () => {
 // 提取博客中所有字符导出为 uniqueText.txt
 gulp.task('uniqueText', () => {
 
+    // 2024年10月31日 [19:31:17] Finished 'uniqueText' after 117 ms
     var buffers = [];
 
     return gulp
@@ -35,8 +36,10 @@ gulp.task('uniqueText', () => {
             console.log(uniqueText);
             console.log('Length:', uniqueText.length);
             writeFileSync('./public/fonts/uniqueText.txt', uniqueText);
-
         });
+
+    // 进一步优化：使用 ripgrep
+    // TODO
 
 });
 
