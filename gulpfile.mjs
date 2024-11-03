@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import purgecss from 'gulp-purgecss';
-import { writeFileSync } from 'fs';
+import { writeFileSync, stat } from 'fs';
 import { exec } from 'child_process';
 import { deleteAsync } from 'del';
 
@@ -42,11 +42,11 @@ gulp.task('uniqueText', () => {
     // TODO
 
 });
-
+const font_name = 'LXGWWenKaiGBScreen'
 // ttf字体文件根据字符集转为woff2
 gulp.task("ttf2woff2", () => {
     // 命令行调用fonttools
-    const command = 'pyftsubset public/fonts/LXGWWenKaiGBScreen.ttf --flavor=woff2 --output-file=public/fonts/LXGWWenKaiGBScreen.woff2 --text-file="public/fonts/uniqueText.txt"'
+    const command = `pyftsubset public/fonts/${font_name}.ttf --flavor=woff2 --output-file=public/fonts/${font_name}.woff2 --text-file="public/fonts/uniqueText.txt"`
     // 执行命令
     return new Promise((resolve, reject) => {
         exec(command, (error, stdout, stderr) => {
@@ -55,9 +55,14 @@ gulp.task("ttf2woff2", () => {
                 reject(error); // 任务失败时拒绝 Promise
                 return;
             }
-            // 打印输出
-            console.log(`stdout: ${stdout}`);
-            console.error(`stderr: ${stderr}`);
+
+            stat(`public/fonts/${font_name}.woff2`, (err, stats) => {
+                if (err) {
+                    console.error(`获取文件大小时出错: ${err}`);
+                    return;
+                }
+                console.log(`${font_name}.woff2 文件大小: ${(stats.size / 1024).toFixed(2)} kb`);
+            });
             resolve(); // 任务成功时解决 Promise
         });
     });
@@ -67,7 +72,7 @@ gulp.task("ttf2woff2", () => {
 gulp.task("clean-fonts", () => {
     return new Promise((resolve, reject) => {
         // 删除18MB原生字体减少deploy传输流量
-        deleteAsync(["public/fonts/*", "!public/fonts/LXGWWenKaiGBScreen.woff2"])
+        deleteAsync(["public/fonts/*", `!public/fonts/${font_name}.woff2`])
         resolve()
     })
 })
