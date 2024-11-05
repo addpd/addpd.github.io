@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>个人简历</title>
+    <link href="/posts/resume.html"/>
+    <url>/posts/resume.html</url>
+    
+    <content type="html"><![CDATA[<p>123</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>博客搭建：使用腾讯对象存储cos部署静态网站</title>
     <link href="/posts/acd9d655.html"/>
     <url>/posts/acd9d655.html</url>
@@ -20,9 +33,9 @@
     
     <tags>
       
-      <tag>hexo</tag>
-      
       <tag>腾讯cos</tag>
+      
+      <tag>hexo</tag>
       
     </tags>
     
