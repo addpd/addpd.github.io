@@ -60,27 +60,6 @@
   
   
   <entry>
-    <title>博客搭建：添加评论插件</title>
-    <link href="/posts/8889ee03.html"/>
-    <url>/posts/8889ee03.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="Gitalk"><a href="#Gitalk" class="headerlink" title="Gitalk"></a>Gitalk</h1><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>gitalk中文文档说明：<a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">gitalk&#x2F;readme-cn.md</a></p><p>步骤：<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055619.png" alt="image.png|600"></p><p>点进去配置出现ID和密钥<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242055976.png" alt="image.png|600"><br>配置到这里<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242110349.png" alt="完整配置|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242107596.png" alt="错误信息|600"><br>回调地址错误，本地测试出现这个是因为本地地址是 <a href="http://localhost:4000/">http://localhost:4000/</a> ，回调地址写的是 <a href="https://addpd.github.io/">https://addpd.github.io/</a></p><p>使用 <a href="https://addpd.github.io/">https://addpd.github.io/</a> 就好了<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242157687.png" alt="对接gitalk成功|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410242159382.png" alt="评论存储在issue里|600"></p><h2 id="每个页面需要手动创建的问题"><a href="#每个页面需要手动创建的问题" class="headerlink" title="每个页面需要手动创建的问题"></a>每个页面需要手动创建的问题</h2><p>createIssueManually 配置为 false，每次管理者访问文章页面会自动创建，但不是每次有新文章自动创建，而是需要访问文章到评论区加载时候才会创建，自动了但没完全自动。</p><h2 id="回调问题"><a href="#回调问题" class="headerlink" title="回调问题"></a>回调问题</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654344.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250654547.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655978.png" alt="image.png|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410250655243.png" alt="image.png|600"></p><h3 id="1、空格替换"><a href="#1、空格替换" class="headerlink" title="1、空格替换"></a>1、空格替换</h3><p>我这里测试的是因为文章标题有空格的会出现回调问题，将空格替换为 <code>_</code> 或 <code>-</code> 就好了，其他的方案仅供参考</p><h3 id="2、使用abbr生成文章绝对链接"><a href="#2、使用abbr生成文章绝对链接" class="headerlink" title="2、使用abbr生成文章绝对链接"></a>2、使用abbr生成文章绝对链接</h3><p>也有不用改标题的方法：使用abbr生成绝对链接，这样url就不会带有空格的标题了<br>1、安装：<code>npm install hexo-abbrlink --save</code><br>2、在 Hexo 配置文件 <code>_config.yml</code> 中启用：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">permalink:</span> <span class="hljs-string">posts/:abbrlink.html</span><br><span class="hljs-attr">abbrlink:</span><br>  <span class="hljs-attr">alg:</span> <span class="hljs-string">crc32</span>  <span class="hljs-comment"># 生成链接的算法，可以是 crc32 或 md5</span><br>  <span class="hljs-attr">rep:</span> <span class="hljs-string">hex</span>    <span class="hljs-comment"># 输出格式，可以是 hex 或 dec</span><br></code></pre></td></tr></table></figure><p>3、生成静态页面时，插件会为每篇文章生成缩写链接。<br>    例如，一篇标题为“Hexo 教程”的文章，如果启用了 <code>abbrlink</code> 插件，可能会生成一个类似于 <code>http://your-site.com/posts/abcd1234.html</code> 这样的短链接。</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>hexo</tag>
-      
-      <tag>gitalk</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>obsidian 使用腾讯云cos存储作为图床</title>
     <link href="/posts/7008b29f.html"/>
     <url>/posts/7008b29f.html</url>
