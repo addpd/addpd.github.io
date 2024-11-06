@@ -2,7 +2,7 @@
   <p class="h4"><%= __(params.key + '.post_total', params.postTotal) %></p>
   <hr>
   <% var dateCursor %>
-  <% page.posts.each(function (post) { %>
+  <% page.posts.each(function (post) { if(post.layout !== 'noindex'){  %>
     <% if(date(post.date, "YYYY") !== dateCursor) { %>
       <% dateCursor = date(post.date, "YYYY") %>
       <p class="h5"><%= dateCursor %></p>
@@ -11,7 +11,7 @@
       <time><%= date(post.date, "MM-DD") %></time>
       <div class="list-group-item-title"><%= post.title %></div>
     </a>
-  <% }) %>
+  <% }}) %>
 </div>
 
 <%- partial('_partials/paginator') %>

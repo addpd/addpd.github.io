@@ -3,9 +3,6 @@ page.banner_img = page.banner_img || theme.post.banner_img
 page.banner_img_height = page.banner_img_height || theme.post.banner_img_height
 page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
 %>
-<!-- 引入reward -->
-<link defer rel="stylesheet" href="/css/reward.css" />
-<script defer src="/js/reward.js"></script>
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
@@ -53,8 +50,10 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
             <hr/>
 
             <!-- 添加打赏模块 -->
+            <link defer rel="stylesheet" href="/css/reward.css" />
+            <script defer src="/js/reward.js"></script>
             <div class="reward-container">
-              <% if (theme.donate.enable) { %>
+              <% if (theme.donate.enable && page.donate != false) { %>
                 <button id="rewardBtn" class="reward-btn">
                   <% if (config.language == 'zh-CN') { %> 
                     🎉 打赏作者

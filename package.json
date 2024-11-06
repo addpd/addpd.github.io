@@ -7,7 +7,9 @@
     "dev-build": "hexo generate --config _config.yml,_config.ignore.yml",
     "dev-server": "hexo server --config _config.yml,_config.ignore.yml",
     "prod-build": "node add_metadata.js && hexo clean && hexo generate --config _config.yml,_config.ignore.pro.yml",
-    "deploy": "pnpm prod-build && gulp && hexo d && hexo d --config _config.deploy.qcloud-cos.yml",
+    "deploy-cos":"hexo d --config _config.deploy.qcloud-cos.yml",
+    "deploy-github":"hexo d",
+    "deploy": "pnpm prod-build && gulp && hexo d && pnpm run deploy-cos",
     "kill4000": "kill_port_4000.bat",
     "firewall-on": "firewall_on.bat",
     "firewall-off": "firewall_off.bat"

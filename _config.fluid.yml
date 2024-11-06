@@ -769,7 +769,7 @@ post:
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
-    type: gitalk
+    type: giscus
 
 
 #---------------------------
@@ -911,17 +911,19 @@ cusdis:
 # Based on GitHub Discussions, similar to Utterances
 # See: https://giscus.app/
 giscus:
-  repo:
-  repo-id:
-  category:
-  category-id:
+  repo: addpd/addpd.github.io
+  repo-id: R_kgDOJALjWw
+  category: Announcements
+  category-id: DIC_kwDOJALjW84Cj_y5
   theme-light: light
   theme-dark: dark
-  mapping: pathname
+  mapping: title
   reactions-enabled: 1
   emit-metadata: 0
   input-position: top
   lang: zh-CN
+  data-loading: lazy
+  crossorigin: anonymous
 
 # Discuss
 # 多平台、多数据库、自托管、免费开源评论系统
