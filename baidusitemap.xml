@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://weihao.life/posts/0.html</loc>
-    <lastmod>2024-12-26</lastmod>
-  </url>
-  <url>
     <loc>https://weihao.life/posts/acd9d655.html</loc>
     <lastmod>2024-11-24</lastmod>
   </url>
   <url>
-    <loc>https://weihao.life/posts/resume.html</loc>
-    <lastmod>2024-11-14</lastmod>
-  </url>
-  <url>
     <loc>https://weihao.life/posts/e87d0aea.html</loc>
     <lastmod>2024-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://weihao.life/posts/6efc70fe.html</loc>
-    <lastmod>2024-11-05</lastmod>
   </url>
   <url>
     <loc>https://weihao.life/posts/7008b29f.html</loc>
@@ -35,13 +23,5 @@
   <url>
     <loc>https://weihao.life/posts/6ba6ac33.html</loc>
     <lastmod>2024-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://weihao.life/posts/820bffdd.html</loc>
-    <lastmod>2024-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://weihao.life/posts/b1d4025b.html</loc>
-    <lastmod>2024-10-25</lastmod>
   </url>
 </urlset> 
