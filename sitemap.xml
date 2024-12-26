@@ -102,13 +102,6 @@
   </url>
   
   <url>
-    <loc>https://weihao.life/tags/%E8%85%BE%E8%AE%AFcos/</loc>
-    <lastmod>2024-12-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://weihao.life/tags/hexo/</loc>
     <lastmod>2024-12-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -124,6 +117,13 @@
   
   <url>
     <loc>https://weihao.life/tags/GithubPages/</loc>
+    <lastmod>2024-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weihao.life/tags/%E8%85%BE%E8%AE%AFcos/</loc>
     <lastmod>2024-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
