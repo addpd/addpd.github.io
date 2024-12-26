@@ -10,6 +10,7 @@
     "deploy-cos": "hexo d --config _config.deploy.qcloud-cos.yml",
     "deploy-github": "hexo d",
     "deploy": "pnpm prod-build && gulp && hexo d && pnpm run deploy-cos",
+    "postdeploy": "echo 部署成功",
     "kill4000": "kill_port_4000.bat",
     "firewall-on": "firewall_on.bat",
     "firewall-off": "firewall_off.bat"
