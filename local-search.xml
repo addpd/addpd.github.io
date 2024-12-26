@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title></title>
+    <link href="/posts/0.html"/>
+    <url>/posts/0.html</url>
+    
+    <content type="html"><![CDATA[<p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202412261058088.png" alt="image.png|600"><br>hexo clean执行的脚本里用到了punycode，现在它过时了所以里面的代码要改为引用punycode.js了</p><p>还有前面绿色INFO在log中显示为 <code>[32mINFO [39m</code><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202412261100638.png" alt="image.png|600"><br>hexo-log 使用 console 库</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2024 安卓手机传图片到ipad第四代ios10.3.3的办法</title>
     <link href="/posts/e87d0aea.html"/>
     <url>/posts/e87d0aea.html</url>
@@ -17,6 +30,19 @@
       <tag>ipad</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>魏好的个人简历</title>
+    <link href="/posts/resume.html"/>
+    <url>/posts/resume.html</url>
+    
+    <content type="html"><![CDATA[<p>在撰写简历（Resume）时，通常包括以下主要部分：</p><ol><li><p><strong>个人信息（Contact Information）</strong>：</p><ul><li>姓名：魏好</li><li>联系电话：13073312176</li><li>电子邮箱：<a href="mailto:&#x61;&#100;&#100;&#112;&#x64;&#x40;&#113;&#113;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#100;&#100;&#112;&#x64;&#x40;&#113;&#113;&#x2e;&#x63;&#x6f;&#x6d;</a></li><li>居住地（城市和国家）：中国</li><li>个人网站：weihao.life</li></ul></li><li><p><strong>职业概述（Resume Summary）或求职目标（Objective）</strong>：</p><ul><li><strong>职业概述</strong>：适用于有丰富经验的求职者，简要总结职业背景和主要成就。</li><li><strong>求职目标</strong>：适用于经验较少的求职者，阐明申请职位的动机和职业目标。</li></ul></li><li><p><strong>工作经历（Work Experience）</strong>：</p><ul><li>以倒序方式列出过去的工作经历，包括职位名称、公司名称、工作时间段。</li><li>简要描述主要职责和取得的成就，突出与申请职位相关的经验。</li></ul></li><li><p><strong>教育背景（Education）</strong>：</p><ul><li>学校名称、所获学位、专业、毕业时间。</li><li>湘潭大学 - 计算机科学与技术</li><li>可根据需要添加学术成就、相关课程或项目。</li></ul></li><li><p><strong>技能（Skills）</strong>：</p><ul><li>列出与申请职位相关的硬技能（如编程语言、软件工具）和软技能（如沟通能力、团队合作）。</li></ul></li></ol><p>根据个人背景和申请职位的要求，简历中还可以添加以下可选部分：</p><ul><li><p><strong>证书和执照（Certifications and Licenses）</strong>：列出获得的专业认证或执照。</p><ul><li>普通话证书</li><li>残疾人证书</li><li>英语证书</li><li>大厂认证的证书</li></ul></li><li><h2 id="项目经验（Projects）：描述参与的相关项目，强调个人贡献和成果。"><a href="#项目经验（Projects）：描述参与的相关项目，强调个人贡献和成果。" class="headerlink" title="项目经验（Projects）：描述参与的相关项目，强调个人贡献和成果。"></a><strong>项目经验（Projects）</strong>：描述参与的相关项目，强调个人贡献和成果。</h2></li><li><p><strong>志愿者经历（Volunteer Experience）</strong>：展示志愿服务经历，体现社会责任感和多样化的经验。</p></li><li><p><strong>荣誉和奖项（Awards and Honors）</strong>：列出获得的奖项或荣誉，突出个人成就。</p></li><li><p><strong>语言能力（Languages）</strong>：说明掌握的语言及熟练程度。</p><ul><li>社会英语证书</li></ul></li><li><h2 id="兴趣爱好（Hobbies-and-Interests）：展示个人兴趣，尤其是与职位相关或能体现软技能的爱好。"><a href="#兴趣爱好（Hobbies-and-Interests）：展示个人兴趣，尤其是与职位相关或能体现软技能的爱好。" class="headerlink" title="兴趣爱好（Hobbies and Interests）：展示个人兴趣，尤其是与职位相关或能体现软技能的爱好。"></a><strong>兴趣爱好（Hobbies and Interests）</strong>：展示个人兴趣，尤其是与职位相关或能体现软技能的爱好。</h2></li></ul><p>请注意，简历的结构应根据个人情况和申请职位的要求进行调整，确保突出最相关和重要的信息。  </p><ul><li><h2 id="github开源项目："><a href="#github开源项目：" class="headerlink" title="github开源项目："></a><strong>github开源项目</strong>：</h2></li></ul>]]></content>
+    
+    
     
   </entry>
   
@@ -39,9 +65,38 @@
     
     <tags>
       
+      <tag>hexo</tag>
+      
       <tag>腾讯cos</tag>
       
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>博客搭建：自定义域名</title>
+    <link href="/posts/6efc70fe.html"/>
+    <url>/posts/6efc70fe.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、情况说明"><a href="#一、情况说明" class="headerlink" title="一、情况说明"></a>一、情况说明</h1><p>之前域名用在<code>notion</code>项目上，现在需改用在<code>Github Pages</code>发布的博客上</p><p>过去以<code>notion</code>为主的发布模式（大概说明）：</p><ol><li><code>notion</code>发布，域名发行商<code>阿里云</code>里配置<code>dns</code>地址到<code>cloudflare</code>，<code>cloudflare</code>里转发到<code>vercel</code>，<code>vercel</code>发布<a href="https://github.com/transitive-bullshit/nextjs-notion-starter-kit">nextjs-notion-starter-kit</a>项目，<code>vercel</code>项目里配置<code>weihao.life</code>域名。</li><li>现在改用 obsidian + hexo + github pages + cloudflare 这种本地写文章一键发布的模式。</li></ol><h1 id="二、开始更改"><a href="#二、开始更改" class="headerlink" title="二、开始更改"></a>二、开始更改</h1><p>现在<code>Github Pages</code>发布的博客域名<code>addpd.github.io</code>要改为<code>weihao.life</code>，步骤如下：</p><h2 id="1-vercel里的域名配置删除"><a href="#1-vercel里的域名配置删除" class="headerlink" title="1.vercel里的域名配置删除"></a>1.<code>vercel</code>里的域名配置删除</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410281215464.png" alt="image.png|600"></p><h2 id="2-将cloudflare里weihao-life的dns配置的改为Github-Pages的ip"><a href="#2-将cloudflare里weihao-life的dns配置的改为Github-Pages的ip" class="headerlink" title="2.将cloudflare里weihao.life的dns配置的改为Github Pages的ip"></a>2.将<code>cloudflare</code>里<code>weihao.life</code>的<code>dns</code>配置的改为<code>Github Pages</code>的<code>ip</code></h2><ul><li><code>Github pages</code>的<code>ip</code> <a href="https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">获取地址</a><br>  <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410281211882.png" alt="image.png|600"></li></ul><h2 id="3-cloudflare中配置"><a href="#3-cloudflare中配置" class="headerlink" title="3.cloudflare中配置"></a>3.<code>cloudflare</code>中配置</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410281207230.png" alt="image.png|600"></p><h2 id="4-域名服务商阿里云改域名dns地址"><a href="#4-域名服务商阿里云改域名dns地址" class="headerlink" title="4.域名服务商阿里云改域名dns地址"></a>4.域名服务商阿里云改域名<code>dns</code>地址</h2><p>因为之前已经将地址设置为<code>cloudflare</code>的了所以就不用改了<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410281203746.png" alt="image.png|600"></p><h2 id="5-github中自定义域名到weihao-life"><a href="#5-github中自定义域名到weihao-life" class="headerlink" title="5.github中自定义域名到weihao.life"></a>5.<code>github</code>中自定义域名到<code>weihao.life</code></h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410281215996.png" alt="image.png|600"></p><h1 id="三、bug及解决办法"><a href="#三、bug及解决办法" class="headerlink" title="三、bug及解决办法"></a>三、bug及解决办法</h1><h2 id="1-图床显示问题"><a href="#1-图床显示问题" class="headerlink" title="1.图床显示问题"></a>1.图床显示问题</h2><p>域名配置成功后，图片显示不出来，因为<code>腾讯云cos</code>中配置了防盗链，把<code>weihao.life</code>添加到白名单中即可</p><h2 id="2-npm-run-deploy-部署后-Github-Pages-自定义域名失效"><a href="#2-npm-run-deploy-部署后-Github-Pages-自定义域名失效" class="headerlink" title="2.npm run deploy 部署后 Github Pages 自定义域名失效"></a>2.<code>npm run deploy</code> 部署后 <code>Github Pages</code> 自定义域名失效</h2><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410281419584.png" alt="image.png|600"></p><h3 id="1-原因"><a href="#1-原因" class="headerlink" title="1.原因"></a>1.原因</h3><p>因为自定义域名设置成功后会在<strong>仓库根目录</strong>生成<code>CNAME</code>文件，<code>CNAME</code>文件没有下载到<strong>本地仓库</strong>，所以部署后会<strong>清除</strong>，自定义域名配置就失效了</p><h3 id="2-解决办法"><a href="#2-解决办法" class="headerlink" title="2.解决办法"></a>2.解决办法</h3><p>将<code>CNAME</code>文件下载到本地仓库<code>source/</code>目录下，这样部署的时候就会上传上去。（注意在<code>github</code>内下载的时候是<code>CNAME.txt</code>，要改成<code>CNAME</code>)<br>    <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410271413401.png" alt="image.png|600"></p><h1 id="四、参考"><a href="#四、参考" class="headerlink" title="四、参考"></a>四、参考</h1><p>[^1]：<a href="https://qinyu.space/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%88%A9%E7%94%A8cloudflare%E5%8A%A0%E9%80%9Fgithub%E4%B8%BB%E9%A1%B5%E8%AE%BF%E9%97%AE/#%E8%AE%BE%E7%BD%AEgithub-page">博客搭建（一）| 利用cloudflare加速github博客访问 - QinYU</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>博客搭建</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
       <tag>hexo</tag>
+      
+      <tag>cloudflare</tag>
+      
+      <tag>GithubPages</tag>
       
     </tags>
     
@@ -73,6 +128,19 @@
       <tag>GithubPages</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>hello-world_copy</title>
+    <link href="/posts/820bffdd.html"/>
+    <url>/posts/820bffdd.html</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410222331413.png" alt="我是一个测试图片描述|600"><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202410222331413.png" alt="image.png|600"></p>]]></content>
+    
+    
     
   </entry>
   
@@ -136,6 +204,19 @@
       <tag>win10</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>hello-world</title>
+    <link href="/posts/b1d4025b.html"/>
+    <url>/posts/b1d4025b.html</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
     
   </entry>
   
