@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>维护日记：2024年12月26日 添加log</title>
+    <link href="/posts/8c45e039.html"/>
+    <url>/posts/8c45e039.html</url>
+    
+    <content type="html"><![CDATA[<p>1.punycode过时提示问题<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202412261058088.png" alt="image.png|600"><br>hexo clean执行的脚本里用到了punycode，现在它过时了所以里面的代码要改为引用punycode.js了<br>hexo相关库的问题</p><p>2.还有前面绿色INFO在log中显示为 <code>[32mINFO [39m</code><br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202412261100638.png" alt="image.png|600"><br>说明颜色信息保存在了log文件中，在win10中使用<code>Get-Content &lt;log文件&gt;</code>即可查看</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2024 安卓手机传图片到ipad第四代ios10.3.3的办法</title>
     <link href="/posts/e87d0aea.html"/>
     <url>/posts/e87d0aea.html</url>
@@ -39,9 +52,9 @@
     
     <tags>
       
-      <tag>hexo</tag>
-      
       <tag>腾讯cos</tag>
+      
+      <tag>hexo</tag>
       
     </tags>
     
