@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://weihao.life/posts/308203ae.html</loc>
+    
+    <lastmod>2025-01-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://weihao.life/posts/8c45e039.html</loc>
     
     <lastmod>2024-12-28</lastmod>
@@ -90,21 +99,7 @@
   </url>
   
   <url>
-    <loc>https://weihao.life/tags/obsidian/</loc>
-    <lastmod>2025-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://weihao.life/tags/%E5%9B%BE%E5%BA%8A/</loc>
-    <lastmod>2025-01-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://weihao.life/tags/%E6%95%B0%E6%8D%AE%E4%BA%91%E5%AD%98%E5%82%A8/</loc>
+    <loc>https://weihao.life/tags/%E6%8A%98%E7%BA%B8/</loc>
     <lastmod>2025-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -139,7 +134,21 @@
   </url>
   
   <url>
-    <loc>https://weihao.life/tags/win10/</loc>
+    <loc>https://weihao.life/tags/obsidian/</loc>
+    <lastmod>2025-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weihao.life/tags/%E5%9B%BE%E5%BA%8A/</loc>
+    <lastmod>2025-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weihao.life/tags/%E6%95%B0%E6%8D%AE%E4%BA%91%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2025-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -154,6 +163,13 @@
   
   <url>
     <loc>https://weihao.life/tags/%E5%AD%97%E4%BD%93/</loc>
+    <lastmod>2025-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weihao.life/tags/win10/</loc>
     <lastmod>2025-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
