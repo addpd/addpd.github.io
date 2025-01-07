@@ -115,6 +115,25 @@
   
   
   <entry>
+    <title>WIN10：命令行修改壁纸，补充到自动切换任务中</title>
+    <link href="/posts/6ba6ac33.html"/>
+    <url>/posts/6ba6ac33.html</url>
+    
+    <content type="html"><![CDATA[<ol><li><code>cmd</code>输入<code>regedit</code>进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">cmd输入 RunDll32.exe USER32.DLL,UpdatePerUserSystemParameters<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure></li><li>用命令行修改图片的方法<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">reg add &quot;hkcu\control panel\desktop&quot; &#x2F;v wallpaper &#x2F;d &quot;新壁纸地址(绝对地址）&quot; &#x2F;f<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure></li><li>壁纸缓存所在位置 <figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">如果壁纸设置成功C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>win10</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vscode &amp; obsidian 使用FiraCode字体并设置组合符号</title>
     <link href="/posts/276bc365.html"/>
     <url>/posts/276bc365.html</url>
@@ -128,25 +147,6 @@
       <tag>vscode</tag>
       
       <tag>字体</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>WIN10：命令行修改壁纸，补充到自动切换任务中</title>
-    <link href="/posts/6ba6ac33.html"/>
-    <url>/posts/6ba6ac33.html</url>
-    
-    <content type="html"><![CDATA[<ol><li><code>cmd</code>输入<code>regedit</code>进入注册表</li><li>图片位置 <img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344436.png" alt="注册表图片位置|600"></li><li>双击里面是图片位置，修改可及时变动，若是无效之前方法是重启电脑让注册表生效，以下是新方法<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">cmd输入 RunDll32.exe USER32.DLL,UpdatePerUserSystemParameters<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure></li><li>用命令行修改图片的方法<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">reg add &quot;hkcu\control panel\desktop&quot; &#x2F;v wallpaper &#x2F;d &quot;新壁纸地址(绝对地址）&quot; &#x2F;f<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure></li><li>壁纸缓存所在位置 <figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">如果壁纸设置成功C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles在上面的目录会生成壁纸的缓存文件，其实是个复制品，就是把你设的新壁纸从原目录复制到上面的目录这也就是为什么你删掉了新壁纸的图片也没啥影响的原因。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure></li><li>测试在 任务计划程序 中定时切换壁纸<ol><li>在之前建立的自动切换深浅主题中新建新操作<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344437.png" alt="Pasted image 20221105222807|600"></li><li>将命令行添加进去<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344438.png" alt="Pasted image 20221105222838|600"></li><li>确定后，右键运行计划来测试，没问题了<img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281344440.png" alt="Pasted image 20221105223002|600"></li></ol></li></ol>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>win10</tag>
       
     </tags>
     
