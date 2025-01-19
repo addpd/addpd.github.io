@@ -7,4 +7,4 @@ background: "#f8f9fe"
 comments: false
 type: "about"
 ---
-在练：易经筋、八部金刚功
+在练：易筋经
