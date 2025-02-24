@@ -8,3 +8,4 @@ public/
 _multiconfig.yml
 _config.deploy.qcloud-cos.yml
 source/_posts/obsidian_data
+.env
