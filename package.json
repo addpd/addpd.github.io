@@ -44,6 +44,6 @@
     "pwa-asset-generator": "^6.3.2"
   },
   "devDependencies": {
-    "gulp-purgecss": "^6.0.0"
+    "gulp-purgecss": "^7.0.2"
   }
 }
