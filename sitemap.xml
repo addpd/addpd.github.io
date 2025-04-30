@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://weihao.life/posts/4d07e3ca.html</loc>
+    
+    <lastmod>2025-04-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://weihao.life/posts/acd9d655.html</loc>
     
     <lastmod>2025-03-12</lastmod>
@@ -67,7 +76,7 @@
 
   <url>
     <loc>https://weihao.life/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,77 +84,77 @@
   
   <url>
     <loc>https://weihao.life/tags/ipad/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/%E8%85%BE%E8%AE%AFcos/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/hexo/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/cloudflare/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/GithubPages/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/obsidian/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/%E5%9B%BE%E5%BA%8A/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/%E6%95%B0%E6%8D%AE%E4%BA%91%E5%AD%98%E5%82%A8/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/vscode/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/%E5%AD%97%E4%BD%93/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weihao.life/tags/win10/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -154,7 +163,7 @@
   
   <url>
     <loc>https://weihao.life/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2025-03-31</lastmod>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
