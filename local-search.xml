@@ -17,6 +17,25 @@
   
   
   <entry>
+    <title>暴雨鸟</title>
+    <link href="/posts/308203ae.html"/>
+    <url>/posts/308203ae.html</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://m.gamer.com.tw/forum/C.php?bsn=60281&page=&snA=57022&last=">【情報】教你如何成為”摺紙殺人魔”接班人! (附教學影片) @PS3 &#x2F; PlayStation3 哈啦板 - 巴哈姆特</a></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202412042141078.png" alt="image.png|600"></p><p><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202412042144234.png" alt="image.png|600"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>折纸</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2024 安卓手机传图片到ipad第四代ios10.3.3的办法</title>
     <link href="/posts/e87d0aea.html"/>
     <url>/posts/e87d0aea.html</url>
@@ -115,6 +134,19 @@
   
   
   <entry>
+    <title>英雄容量和马车每周旅客人数修改</title>
+    <link href="/posts/5a5f4367.html"/>
+    <url>/posts/5a5f4367.html</url>
+    
+    <content type="html"><![CDATA[<p>因为改源文件有风险，所以在mod上修改<br>修改的是增加100容量的mod（编号为1130809780）<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281358477.png" alt="100 Hero Capacity|600"><br>将（”roster_size_upgrades”中的”amount”）的100改成520<br>马车每周人数和等级概率合并了那个马车的mod（编号是942405260）后禁用<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281358478.png" alt="Better Stage Cocah|600"><br>文件示例：<br><img src="https://ob-1300571388.cos.ap-nanjing.myqcloud.com/ob-pic/202409281358479.png" alt="100 Hero Capacity Mod location file json|600">修改后100容量mod中马车的json为</p><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#123;    &quot;on_start_town_visit_priority&quot; :  0,    &quot;requirements&quot;:    &#123;        &quot;number_of_quests_finished&quot;: 0,        &quot;highest_dungeon_level&quot;: 0    &#125;,&quot;data&quot; :&#123; &quot;stores&quot; :[            &#123;                &quot;id&quot; : &quot;hero_recruit&quot;,                &quot;data&quot;:                &#123;                    &quot;first_hero_classes&quot; :                     [                        &quot;plague_doctor&quot;,                        &quot;vestal&quot;                    ],                                &quot;number_of_recruits_upgrades&quot;:                    [&#123; &quot;amount&quot;: 3 &#125;,&#123; &quot;amount&quot;: 7, &quot;upgrade_tree_id&quot;: &quot;stage_coach.numrecruits&quot;, &quot;upgrade_requirement_code&quot;: &quot;a&quot; &#125;,&#123; &quot;amount&quot;: 8, &quot;upgrade_tree_id&quot;: &quot;stage_coach.numrecruits&quot;, &quot;upgrade_requirement_code&quot;: &quot;b&quot; &#125;,&#123; &quot;amount&quot;: 9, &quot;upgrade_tree_id&quot;: &quot;stage_coach.numrecruits&quot;, &quot;upgrade_requirement_code&quot;: &quot;c&quot; &#125;,&#123; &quot;amount&quot;: 10, &quot;upgrade_tree_id&quot;: &quot;stage_coach.numrecruits&quot;, &quot;upgrade_requirement_code&quot;: &quot;d&quot; &#125;,&#123; &quot;amount&quot;: 11, &quot;upgrade_tree_id&quot;: &quot;stage_coach.numrecruits&quot;, &quot;upgrade_requirement_code&quot;: &quot;e&quot; &#125;,&#123; &quot;amount&quot;: 12, &quot;upgrade_tree_id&quot;: &quot;stage_coach.numrecruits&quot;, &quot;upgrade_requirement_code&quot;: &quot;f&quot; &#125;],                    &quot;roster_size_upgrades&quot; :                     [                        &#123; &quot;amount&quot; : 520 &#125;,                        &#123; &quot;amount&quot; : 520,     &quot;upgrade_tree_id&quot; :  &quot;stage_coach.rostersize&quot;, &quot;upgrade_requirement_code&quot; : &quot;a&quot;  &#125;,                        &#123; &quot;amount&quot; : 520,     &quot;upgrade_tree_id&quot; :  &quot;stage_coach.rostersize&quot;, &quot;upgrade_requirement_code&quot; : &quot;b&quot;  &#125;,                        &#123; &quot;amount&quot; : 520,     &quot;upgrade_tree_id&quot; :  &quot;stage_coach.rostersize&quot;, &quot;upgrade_requirement_code&quot; : &quot;c&quot;  &#125;,                        &#123; &quot;amount&quot; : 520,     &quot;upgrade_tree_id&quot; :  &quot;stage_coach.rostersize&quot;, &quot;upgrade_requirement_code&quot; : &quot;d&quot;  &#125;,                        &#123; &quot;amount&quot; : 520,     &quot;upgrade_tree_id&quot; :  &quot;stage_coach.rostersize&quot;, &quot;upgrade_requirement_code&quot; : &quot;e&quot;  &#125;                    ],                    &quot;upgraded_recruits_upgrades&quot; :                    [&#123; &quot;level&quot; : 1, &quot;chance&quot; : 0.375,  &quot;number_of_extra_positive_quirks&quot; : 0, &quot;number_of_extra_negative_quirks&quot; : 0, &quot;number_of_extra_combat_skills&quot; : 0, &quot;number_of_extra_camping_skills&quot;: 1, &quot;guaranteed_previous_raid_dead_hero_levels&quot; : [2],&quot;upgrade_tree_id&quot; :  &quot;stage_coach.upgraded_recruits&quot;, &quot;upgrade_requirement_code&quot; : &quot;a&quot; &#125;,&#123; &quot;level&quot; : 2, &quot;chance&quot; : 0.250,  &quot;number_of_extra_positive_quirks&quot; : 1, &quot;number_of_extra_negative_quirks&quot; : 1, &quot;number_of_extra_combat_skills&quot; : 1, &quot;number_of_extra_camping_skills&quot;: 1, &quot;guaranteed_previous_raid_dead_hero_levels&quot; : [3],&quot;upgrade_tree_id&quot; :  &quot;stage_coach.upgraded_recruits&quot;, &quot;upgrade_requirement_code&quot; : &quot;b&quot; &#125;,&#123; &quot;level&quot; : 3, &quot;chance&quot; : 0.1875,  &quot;number_of_extra_positive_quirks&quot; : 2, &quot;number_of_extra_negative_quirks&quot; : 2, &quot;number_of_extra_combat_skills&quot; : 2, &quot;number_of_extra_camping_skills&quot;: 2, &quot;guaranteed_previous_raid_dead_hero_levels&quot; : [4],&quot;upgrade_tree_id&quot; :  &quot;stage_coach.upgraded_recruits&quot;, &quot;upgrade_requirement_code&quot; : &quot;c&quot; &#125;,&#123; &quot;level&quot; : 4, &quot;chance&quot; : 0.125,  &quot;number_of_extra_positive_quirks&quot; : 2, &quot;number_of_extra_negative_quirks&quot; : 2, &quot;number_of_extra_combat_skills&quot; : 2, &quot;number_of_extra_camping_skills&quot;: 2, &quot;guaranteed_previous_raid_dead_hero_levels&quot; : [5],&quot;upgrade_tree_id&quot; :  &quot;stage_coach.upgraded_recruits&quot;, &quot;upgrade_requirement_code&quot; : &quot;d&quot; &#125;,&#123; &quot;level&quot; : 5, &quot;chance&quot; : 0.0625,  &quot;number_of_extra_positive_quirks&quot; : 3, &quot;number_of_extra_negative_quirks&quot; : 3, &quot;number_of_extra_combat_skills&quot; : 3, &quot;number_of_extra_camping_skills&quot;: 3, &quot;guaranteed_previous_raid_dead_hero_levels&quot; : [6],&quot;upgrade_tree_id&quot; :  &quot;stage_coach.upgraded_recruits&quot;, &quot;upgrade_requirement_code&quot; : &quot;e&quot; &#125;]                &#125;            &#125;        ]&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vscode &amp; obsidian 使用FiraCode字体并设置组合符号</title>
     <link href="/posts/276bc365.html"/>
     <url>/posts/276bc365.html</url>
@@ -149,6 +181,19 @@
       <tag>win10</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>hello-world</title>
+    <link href="/posts/b1d4025b.html"/>
+    <url>/posts/b1d4025b.html</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
     
   </entry>
   
